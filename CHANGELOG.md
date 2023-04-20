@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - Initial code base and test
+- Eslint to enforce code style
 - Jest testing framework
 - Rollup building system
 - This changelog
