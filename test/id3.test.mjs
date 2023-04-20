@@ -1,4 +1,4 @@
-'use strict';
+
 
 import { readID3 } from '../src/id3.mjs';
 
