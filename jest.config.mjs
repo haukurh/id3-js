@@ -8,11 +8,11 @@ export default {
 	clearMocks: true,
 
 	// Indicates which provider should be used to instrument code for coverage
-	coverageProvider: "v8",
+	coverageProvider: 'v8',
 
 	// The glob patterns Jest uses to detect test files
 	testMatch: [
-		"**/__tests__/**/*.mjs?(x)",
-		"**/?(*.)+(spec|test).mjs?(x)"
+		'**/__tests__/**/*.mjs?(x)',
+		'**/?(*.)+(spec|test).mjs?(x)'
 	],
 };

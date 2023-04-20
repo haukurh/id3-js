@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
+    "lint": "eslint --config eslint.config.js .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {

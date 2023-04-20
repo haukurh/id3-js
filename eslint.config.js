@@ -1,5 +1,6 @@
 export default [
 	{
+		files: ['**/*.mjs', '**/*.js'],
 		rules: {
 			'indent': [
 				'error',
