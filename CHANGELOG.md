@@ -13,4 +13,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Eslint to enforce code style
 - Jest testing framework
 - Rollup building system
+- ID3 standards reference material
 - This changelog
