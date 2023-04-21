@@ -7,7 +7,7 @@ import {
 
 import { genre } from './genre.mjs';
 
-const readIDv1 = (file) => {
+const readID3v1 = (file) => {
 	// in ID3v1 it's always the last 128 bytes of the file
 	const tag = file.slice(-128);
 
@@ -17,28 +17,25 @@ const readIDv1 = (file) => {
 	}
 
 	const genreIndex = getUInt8(tag, 127);
-
-	const containsTrack = getUInt8(tag, 125) === 0;
-	let track = null;
-	if (containsTrack) {
-		const trackInt = getUInt8(tag, 126);
-		if (trackInt > 0) {
-			track = trackInt;
-		}
-	}
-
-	return {
-		version: 'ID3v1',
+	const id3 = {
+		version: 'ID3v1.0',
 		metadata: {
 			title: readChars(tag, 3, 30).trim(),
 			artist: readChars(tag, 33, 30).trim(),
 			album: readChars(tag, 63, 30).trim(),
 			year: readChars(tag, 93, 4).trim(),
-			comment: readChars(tag, 97, containsTrack ? 28 : 30).trim(),
-			track: track,
+			comment: readChars(tag, 97, 30).trim(),
 			genre: genreIndex in genre ? genre[genreIndex] : 'Unknown',
 		},
 	};
+
+	const isID3v1_1 = tag[125] === 0 && tag[126] !== 0;
+	if (isID3v1_1) {
+		id3.version = 'ID3v1.1';
+		id3.metadata.track = getUInt8(tag, 126);
+	}
+
+	return id3;
 };
 
 const readID3v2 = (file) => {
@@ -63,5 +60,5 @@ export const readID3 = (file) => {
 	if (id3v2) {
 		return id3v2;
 	}
-	return readIDv1(file);
+	return readID3v1(file);
 };
