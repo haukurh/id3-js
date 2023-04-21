@@ -2731,11 +2731,11 @@ test('ID3v1.0: Test case 271: Title with 8-bit iso-8859-1 characters (would be w
 
 test('ID3v1.0: Test case 272: Title with utf-8-encoded 8-bit string (would be written as r&auml;ksm&ouml;rg&aring;s in HTML).', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_272_extra.mp3'));
-	expect(id3.metadata.title).toBe('räksmörgås');
-	expect(id3.metadata.artist).toBe('räksmörgås');
-	expect(id3.metadata.album).toBe('räksmörgås');
+	expect(id3.metadata.title).toBe('rÃ¤ksmÃ¶rgÃ¥s');
+	expect(id3.metadata.artist).toBe('rÃ¤ksmÃ¶rgÃ¥s');
+	expect(id3.metadata.album).toBe('rÃ¤ksmÃ¶rgÃ¥s');
 	expect(id3.metadata.year).toBe('2003');
-	expect(id3.metadata.comment).toBe('räksmörgås');
+	expect(id3.metadata.comment).toBe('rÃ¤ksmÃ¶rgÃ¥s');
 	expect(id3.metadata.genre).toBe('Blues');
 });
 
