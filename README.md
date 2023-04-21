@@ -9,6 +9,7 @@ Research material for how the ID3 tag works in various versions of it. Most of i
 [web.archive.org](https://web.archive.org) instead.
 
 - [wikipedia.org; ID3](https://en.wikipedia.org/wiki/ID3)
+- [web.archive.org: id3.org/ID3v1](https://web.archive.org/web/20070930203401/http://www.id3.org/ID3v1)
 - [web.archive.org: id3v2.3.0.txt](https://web.archive.org/web/20220121174529/https://id3.org/d3v2.3.0)
 - [web.archive.org: id3v2.4.0-structure.txt](https://web.archive.org/web/20211112034826/https://id3.org/id3v2.4.0-structure)
 - [web.archive.org: id3v2.4.0-frames.txt](https://web.archive.org/web/20211109170227/https://id3.org/id3v2.4.0-frames)
