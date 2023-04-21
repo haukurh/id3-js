@@ -41,7 +41,7 @@ test('ID3v1.1: Test case 2: An ordinary ID3v1.1 tag with all fields set to a pla
 	expect(id3.metadata.genre).toBe('Hip-Hop');
 });
 
-test('ID3v1.0: Test case 3: An ID3 tag with its header in the wrong case. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 3: An ID3 tag with its header in the wrong case.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_003_basic_F.mp3'));
 	expect(id3).toBeNull();
 });
@@ -77,7 +77,7 @@ test('ID3v1.1: Test case 6: An ID3v1.1 tag with all fields set to longest value.
 	expect(id3.metadata.genre).toBe('Blues');
 });
 
-test('ID3v1.0: Test case 7: An ID3v1 tag with junk after string terminator. The junk should not show up for the user (i.e. only the string 12345 should show up). Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 7: An ID3v1 tag with junk after string terminator. The junk should not show up for the user (i.e. only the string 12345 should show up).', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_007_basic_W.mp3'));
 	expect(id3.metadata.title).toBe('12345');
 	expect(id3.metadata.artist).toBe('12345');
@@ -87,7 +87,7 @@ test('ID3v1.0: Test case 7: An ID3v1 tag with junk after string terminator. The 
 	expect(id3.metadata.genre).toBe('Blues');
 });
 
-test('ID3v1.1: Test case 8: An ID3v1 tag with junk after string terminator. The junk should not show up for the user (i.e. only the string 12345 should show up). Test case might generate a decoding warning.', () => {
+test('ID3v1.1: Test case 8: An ID3v1 tag with junk after string terminator. The junk should not show up for the user (i.e. only the string 12345 should show up).', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_008_basic_W.mp3'));
 	expect(id3.metadata.title).toBe('12345');
 	expect(id3.metadata.artist).toBe('12345');
@@ -129,7 +129,7 @@ test('ID3v1.0: Test case 11: An ID3 tag with the year set to 9999.', () => {
 	expect(id3.metadata.genre).toBe('Blues');
 });
 
-test('ID3v1.0: Test case 12: An ID3 tag with the year set to "   3". Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 12: An ID3 tag with the year set to "   3".', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_012_year_F.mp3'));
 	expect(id3.metadata.title).toBe('');
 	expect(id3.metadata.artist).toBe('');
@@ -139,7 +139,7 @@ test('ID3v1.0: Test case 12: An ID3 tag with the year set to "   3". Test case s
 	expect(id3.metadata.genre).toBe('Blues');
 });
 
-test('ID3v1.0: Test case 13: An ID3 tag with the year set to "112\0". Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 13: An ID3 tag with the year set to "112\0".', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_013_year_F.mp3'));
 	expect(id3.metadata.title).toBe('');
 	expect(id3.metadata.artist).toBe('');
@@ -149,7 +149,7 @@ test('ID3v1.0: Test case 13: An ID3 tag with the year set to "112\0". Test case 
 	expect(id3.metadata.genre).toBe('Blues');
 });
 
-test('ID3v1.0: Test case 14: An ID3 tag with the year set to NULL. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 14: An ID3 tag with the year set to NULL.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_014_year_F.mp3'));
 	expect(id3.metadata.title).toBe('');
 	expect(id3.metadata.artist).toBe('');
@@ -959,7 +959,7 @@ test('ID3v1.0: Test case 94: An ID3 tag with genre set to Hard Rock.', () => {
 	expect(id3.metadata.genre).toBe('Hard Rock');
 });
 
-test('ID3v1.0: Test case 95: An ID3 tag with genre set to Folk. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 95: An ID3 tag with genre set to Folk. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_095_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Folk');
 	expect(id3.metadata.artist).toBe('');
@@ -969,7 +969,7 @@ test('ID3v1.0: Test case 95: An ID3 tag with genre set to Folk. Only the first 8
 	expect(id3.metadata.genre).toBe('Folk');
 });
 
-test('ID3v1.0: Test case 96: An ID3 tag with genre set to Folk-Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 96: An ID3 tag with genre set to Folk-Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_096_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Folk-Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -979,7 +979,7 @@ test('ID3v1.0: Test case 96: An ID3 tag with genre set to Folk-Rock. Only the fi
 	expect(id3.metadata.genre).toBe('Folk-Rock');
 });
 
-test('ID3v1.0: Test case 97: An ID3 tag with genre set to National Folk. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 97: An ID3 tag with genre set to National Folk. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_097_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('National Folk');
 	expect(id3.metadata.artist).toBe('');
@@ -989,7 +989,7 @@ test('ID3v1.0: Test case 97: An ID3 tag with genre set to National Folk. Only th
 	expect(id3.metadata.genre).toBe('National Folk');
 });
 
-test('ID3v1.0: Test case 98: An ID3 tag with genre set to Swing. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 98: An ID3 tag with genre set to Swing. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_098_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Swing');
 	expect(id3.metadata.artist).toBe('');
@@ -999,7 +999,7 @@ test('ID3v1.0: Test case 98: An ID3 tag with genre set to Swing. Only the first 
 	expect(id3.metadata.genre).toBe('Swing');
 });
 
-test('ID3v1.0: Test case 99: An ID3 tag with genre set to Fast Fusion. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 99: An ID3 tag with genre set to Fast Fusion. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_099_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Fast Fusion');
 	expect(id3.metadata.artist).toBe('');
@@ -1009,7 +1009,7 @@ test('ID3v1.0: Test case 99: An ID3 tag with genre set to Fast Fusion. Only the 
 	expect(id3.metadata.genre).toBe('Fast Fusion');
 });
 
-test('ID3v1.0: Test case 100: An ID3 tag with genre set to Bebob. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 100: An ID3 tag with genre set to Bebob. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_100_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Bebob');
 	expect(id3.metadata.artist).toBe('');
@@ -1019,7 +1019,7 @@ test('ID3v1.0: Test case 100: An ID3 tag with genre set to Bebob. Only the first
 	expect(id3.metadata.genre).toBe('Bebob');
 });
 
-test('ID3v1.0: Test case 101: An ID3 tag with genre set to Latin. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 101: An ID3 tag with genre set to Latin. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_101_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Latin');
 	expect(id3.metadata.artist).toBe('');
@@ -1029,7 +1029,7 @@ test('ID3v1.0: Test case 101: An ID3 tag with genre set to Latin. Only the first
 	expect(id3.metadata.genre).toBe('Latin');
 });
 
-test('ID3v1.0: Test case 102: An ID3 tag with genre set to Revival. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 102: An ID3 tag with genre set to Revival. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_102_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Revival');
 	expect(id3.metadata.artist).toBe('');
@@ -1039,7 +1039,7 @@ test('ID3v1.0: Test case 102: An ID3 tag with genre set to Revival. Only the fir
 	expect(id3.metadata.genre).toBe('Revival');
 });
 
-test('ID3v1.0: Test case 103: An ID3 tag with genre set to Celtic. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 103: An ID3 tag with genre set to Celtic. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_103_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Celtic');
 	expect(id3.metadata.artist).toBe('');
@@ -1049,7 +1049,7 @@ test('ID3v1.0: Test case 103: An ID3 tag with genre set to Celtic. Only the firs
 	expect(id3.metadata.genre).toBe('Celtic');
 });
 
-test('ID3v1.0: Test case 104: An ID3 tag with genre set to Bluegrass. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 104: An ID3 tag with genre set to Bluegrass. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_104_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Bluegrass');
 	expect(id3.metadata.artist).toBe('');
@@ -1059,7 +1059,7 @@ test('ID3v1.0: Test case 104: An ID3 tag with genre set to Bluegrass. Only the f
 	expect(id3.metadata.genre).toBe('Bluegrass');
 });
 
-test('ID3v1.0: Test case 105: An ID3 tag with genre set to Avantgarde. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 105: An ID3 tag with genre set to Avantgarde. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_105_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Avantgarde');
 	expect(id3.metadata.artist).toBe('');
@@ -1069,7 +1069,7 @@ test('ID3v1.0: Test case 105: An ID3 tag with genre set to Avantgarde. Only the 
 	expect(id3.metadata.genre).toBe('Avantgarde');
 });
 
-test('ID3v1.0: Test case 106: An ID3 tag with genre set to Gothic Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 106: An ID3 tag with genre set to Gothic Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_106_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Gothic Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1079,7 +1079,7 @@ test('ID3v1.0: Test case 106: An ID3 tag with genre set to Gothic Rock. Only the
 	expect(id3.metadata.genre).toBe('Gothic Rock');
 });
 
-test('ID3v1.0: Test case 107: An ID3 tag with genre set to Progressive Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 107: An ID3 tag with genre set to Progressive Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_107_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Progressive Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1089,7 +1089,7 @@ test('ID3v1.0: Test case 107: An ID3 tag with genre set to Progressive Rock. Onl
 	expect(id3.metadata.genre).toBe('Progressive Rock');
 });
 
-test('ID3v1.0: Test case 108: An ID3 tag with genre set to Psychedelic Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 108: An ID3 tag with genre set to Psychedelic Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_108_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Psychedelic Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1099,7 +1099,7 @@ test('ID3v1.0: Test case 108: An ID3 tag with genre set to Psychedelic Rock. Onl
 	expect(id3.metadata.genre).toBe('Psychedelic Rock');
 });
 
-test('ID3v1.0: Test case 109: An ID3 tag with genre set to Symphonic Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 109: An ID3 tag with genre set to Symphonic Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_109_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Symphonic Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1109,7 +1109,7 @@ test('ID3v1.0: Test case 109: An ID3 tag with genre set to Symphonic Rock. Only 
 	expect(id3.metadata.genre).toBe('Symphonic Rock');
 });
 
-test('ID3v1.0: Test case 110: An ID3 tag with genre set to Slow Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 110: An ID3 tag with genre set to Slow Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_110_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Slow Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1119,7 +1119,7 @@ test('ID3v1.0: Test case 110: An ID3 tag with genre set to Slow Rock. Only the f
 	expect(id3.metadata.genre).toBe('Slow Rock');
 });
 
-test('ID3v1.0: Test case 111: An ID3 tag with genre set to Big Band. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 111: An ID3 tag with genre set to Big Band. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_111_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Big Band');
 	expect(id3.metadata.artist).toBe('');
@@ -1129,7 +1129,7 @@ test('ID3v1.0: Test case 111: An ID3 tag with genre set to Big Band. Only the fi
 	expect(id3.metadata.genre).toBe('Big Band');
 });
 
-test('ID3v1.0: Test case 112: An ID3 tag with genre set to Chorus. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 112: An ID3 tag with genre set to Chorus. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_112_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Chorus');
 	expect(id3.metadata.artist).toBe('');
@@ -1139,7 +1139,7 @@ test('ID3v1.0: Test case 112: An ID3 tag with genre set to Chorus. Only the firs
 	expect(id3.metadata.genre).toBe('Chorus');
 });
 
-test('ID3v1.0: Test case 113: An ID3 tag with genre set to Easy Listening. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 113: An ID3 tag with genre set to Easy Listening. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_113_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Easy Listening');
 	expect(id3.metadata.artist).toBe('');
@@ -1149,7 +1149,7 @@ test('ID3v1.0: Test case 113: An ID3 tag with genre set to Easy Listening. Only 
 	expect(id3.metadata.genre).toBe('Easy Listening');
 });
 
-test('ID3v1.0: Test case 114: An ID3 tag with genre set to Acoustic. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 114: An ID3 tag with genre set to Acoustic. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_114_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Acoustic');
 	expect(id3.metadata.artist).toBe('');
@@ -1159,7 +1159,7 @@ test('ID3v1.0: Test case 114: An ID3 tag with genre set to Acoustic. Only the fi
 	expect(id3.metadata.genre).toBe('Acoustic');
 });
 
-test('ID3v1.0: Test case 115: An ID3 tag with genre set to Humour. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 115: An ID3 tag with genre set to Humour. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_115_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Humour');
 	expect(id3.metadata.artist).toBe('');
@@ -1169,7 +1169,7 @@ test('ID3v1.0: Test case 115: An ID3 tag with genre set to Humour. Only the firs
 	expect(id3.metadata.genre).toBe('Humour');
 });
 
-test('ID3v1.0: Test case 116: An ID3 tag with genre set to Speech. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 116: An ID3 tag with genre set to Speech. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_116_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Speech');
 	expect(id3.metadata.artist).toBe('');
@@ -1179,7 +1179,7 @@ test('ID3v1.0: Test case 116: An ID3 tag with genre set to Speech. Only the firs
 	expect(id3.metadata.genre).toBe('Speech');
 });
 
-test('ID3v1.0: Test case 117: An ID3 tag with genre set to Chanson. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 117: An ID3 tag with genre set to Chanson. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_117_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Chanson');
 	expect(id3.metadata.artist).toBe('');
@@ -1189,7 +1189,7 @@ test('ID3v1.0: Test case 117: An ID3 tag with genre set to Chanson. Only the fir
 	expect(id3.metadata.genre).toBe('Chanson');
 });
 
-test('ID3v1.0: Test case 118: An ID3 tag with genre set to Opera. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 118: An ID3 tag with genre set to Opera. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_118_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Opera');
 	expect(id3.metadata.artist).toBe('');
@@ -1199,7 +1199,7 @@ test('ID3v1.0: Test case 118: An ID3 tag with genre set to Opera. Only the first
 	expect(id3.metadata.genre).toBe('Opera');
 });
 
-test('ID3v1.0: Test case 119: An ID3 tag with genre set to Chamber Music. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 119: An ID3 tag with genre set to Chamber Music. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_119_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Chamber Music');
 	expect(id3.metadata.artist).toBe('');
@@ -1209,7 +1209,7 @@ test('ID3v1.0: Test case 119: An ID3 tag with genre set to Chamber Music. Only t
 	expect(id3.metadata.genre).toBe('Chamber Music');
 });
 
-test('ID3v1.0: Test case 120: An ID3 tag with genre set to Sonata. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 120: An ID3 tag with genre set to Sonata. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_120_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Sonata');
 	expect(id3.metadata.artist).toBe('');
@@ -1219,7 +1219,7 @@ test('ID3v1.0: Test case 120: An ID3 tag with genre set to Sonata. Only the firs
 	expect(id3.metadata.genre).toBe('Sonata');
 });
 
-test('ID3v1.0: Test case 121: An ID3 tag with genre set to Symphony. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 121: An ID3 tag with genre set to Symphony. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_121_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Symphony');
 	expect(id3.metadata.artist).toBe('');
@@ -1229,7 +1229,7 @@ test('ID3v1.0: Test case 121: An ID3 tag with genre set to Symphony. Only the fi
 	expect(id3.metadata.genre).toBe('Symphony');
 });
 
-test('ID3v1.0: Test case 122: An ID3 tag with genre set to Booty Bass. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 122: An ID3 tag with genre set to Booty Bass. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_122_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Booty Bass');
 	expect(id3.metadata.artist).toBe('');
@@ -1239,7 +1239,7 @@ test('ID3v1.0: Test case 122: An ID3 tag with genre set to Booty Bass. Only the 
 	expect(id3.metadata.genre).toBe('Booty Bass');
 });
 
-test('ID3v1.0: Test case 123: An ID3 tag with genre set to Primus. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 123: An ID3 tag with genre set to Primus. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_123_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Primus');
 	expect(id3.metadata.artist).toBe('');
@@ -1249,7 +1249,7 @@ test('ID3v1.0: Test case 123: An ID3 tag with genre set to Primus. Only the firs
 	expect(id3.metadata.genre).toBe('Primus');
 });
 
-test('ID3v1.0: Test case 124: An ID3 tag with genre set to Porn Groove. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 124: An ID3 tag with genre set to Porn Groove. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_124_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Porn Groove');
 	expect(id3.metadata.artist).toBe('');
@@ -1259,7 +1259,7 @@ test('ID3v1.0: Test case 124: An ID3 tag with genre set to Porn Groove. Only the
 	expect(id3.metadata.genre).toBe('Porn Groove');
 });
 
-test('ID3v1.0: Test case 125: An ID3 tag with genre set to Satire. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 125: An ID3 tag with genre set to Satire. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_125_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Satire');
 	expect(id3.metadata.artist).toBe('');
@@ -1269,7 +1269,7 @@ test('ID3v1.0: Test case 125: An ID3 tag with genre set to Satire. Only the firs
 	expect(id3.metadata.genre).toBe('Satire');
 });
 
-test('ID3v1.0: Test case 126: An ID3 tag with genre set to Slow Jam. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 126: An ID3 tag with genre set to Slow Jam. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_126_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Slow Jam');
 	expect(id3.metadata.artist).toBe('');
@@ -1279,7 +1279,7 @@ test('ID3v1.0: Test case 126: An ID3 tag with genre set to Slow Jam. Only the fi
 	expect(id3.metadata.genre).toBe('Slow Jam');
 });
 
-test('ID3v1.0: Test case 127: An ID3 tag with genre set to Club. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 127: An ID3 tag with genre set to Club. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_127_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Club');
 	expect(id3.metadata.artist).toBe('');
@@ -1289,7 +1289,7 @@ test('ID3v1.0: Test case 127: An ID3 tag with genre set to Club. Only the first 
 	expect(id3.metadata.genre).toBe('Club');
 });
 
-test('ID3v1.0: Test case 128: An ID3 tag with genre set to Tango. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 128: An ID3 tag with genre set to Tango. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_128_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Tango');
 	expect(id3.metadata.artist).toBe('');
@@ -1299,7 +1299,7 @@ test('ID3v1.0: Test case 128: An ID3 tag with genre set to Tango. Only the first
 	expect(id3.metadata.genre).toBe('Tango');
 });
 
-test('ID3v1.0: Test case 129: An ID3 tag with genre set to Samba. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 129: An ID3 tag with genre set to Samba. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_129_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Samba');
 	expect(id3.metadata.artist).toBe('');
@@ -1309,7 +1309,7 @@ test('ID3v1.0: Test case 129: An ID3 tag with genre set to Samba. Only the first
 	expect(id3.metadata.genre).toBe('Samba');
 });
 
-test('ID3v1.0: Test case 130: An ID3 tag with genre set to Folklore. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 130: An ID3 tag with genre set to Folklore. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_130_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Folklore');
 	expect(id3.metadata.artist).toBe('');
@@ -1319,7 +1319,7 @@ test('ID3v1.0: Test case 130: An ID3 tag with genre set to Folklore. Only the fi
 	expect(id3.metadata.genre).toBe('Folklore');
 });
 
-test('ID3v1.0: Test case 131: An ID3 tag with genre set to Ballad. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 131: An ID3 tag with genre set to Ballad. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_131_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Ballad');
 	expect(id3.metadata.artist).toBe('');
@@ -1329,7 +1329,7 @@ test('ID3v1.0: Test case 131: An ID3 tag with genre set to Ballad. Only the firs
 	expect(id3.metadata.genre).toBe('Ballad');
 });
 
-test('ID3v1.0: Test case 132: An ID3 tag with genre set to Power Ballad. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 132: An ID3 tag with genre set to Power Ballad. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_132_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Power Ballad');
 	expect(id3.metadata.artist).toBe('');
@@ -1339,7 +1339,7 @@ test('ID3v1.0: Test case 132: An ID3 tag with genre set to Power Ballad. Only th
 	expect(id3.metadata.genre).toBe('Power Ballad');
 });
 
-test('ID3v1.0: Test case 133: An ID3 tag with genre set to Rhythmic Soul. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 133: An ID3 tag with genre set to Rhythmic Soul. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_133_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Rhythmic Soul');
 	expect(id3.metadata.artist).toBe('');
@@ -1349,7 +1349,7 @@ test('ID3v1.0: Test case 133: An ID3 tag with genre set to Rhythmic Soul. Only t
 	expect(id3.metadata.genre).toBe('Rhythmic Soul');
 });
 
-test('ID3v1.0: Test case 134: An ID3 tag with genre set to Freestyle. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 134: An ID3 tag with genre set to Freestyle. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_134_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Freestyle');
 	expect(id3.metadata.artist).toBe('');
@@ -1359,7 +1359,7 @@ test('ID3v1.0: Test case 134: An ID3 tag with genre set to Freestyle. Only the f
 	expect(id3.metadata.genre).toBe('Freestyle');
 });
 
-test('ID3v1.0: Test case 135: An ID3 tag with genre set to Duet. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 135: An ID3 tag with genre set to Duet. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_135_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Duet');
 	expect(id3.metadata.artist).toBe('');
@@ -1369,7 +1369,7 @@ test('ID3v1.0: Test case 135: An ID3 tag with genre set to Duet. Only the first 
 	expect(id3.metadata.genre).toBe('Duet');
 });
 
-test('ID3v1.0: Test case 136: An ID3 tag with genre set to Punk Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 136: An ID3 tag with genre set to Punk Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_136_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Punk Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1379,7 +1379,7 @@ test('ID3v1.0: Test case 136: An ID3 tag with genre set to Punk Rock. Only the f
 	expect(id3.metadata.genre).toBe('Punk Rock');
 });
 
-test('ID3v1.0: Test case 137: An ID3 tag with genre set to Drum Solo. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 137: An ID3 tag with genre set to Drum Solo. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_137_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Drum Solo');
 	expect(id3.metadata.artist).toBe('');
@@ -1389,7 +1389,7 @@ test('ID3v1.0: Test case 137: An ID3 tag with genre set to Drum Solo. Only the f
 	expect(id3.metadata.genre).toBe('Drum Solo');
 });
 
-test('ID3v1.0: Test case 138: An ID3 tag with genre set to A capella. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 138: An ID3 tag with genre set to A capella. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_138_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('A capella');
 	expect(id3.metadata.artist).toBe('');
@@ -1399,7 +1399,7 @@ test('ID3v1.0: Test case 138: An ID3 tag with genre set to A capella. Only the f
 	expect(id3.metadata.genre).toBe('A capella');
 });
 
-test('ID3v1.0: Test case 139: An ID3 tag with genre set to Euro-House. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 139: An ID3 tag with genre set to Euro-House. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_139_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Euro-House');
 	expect(id3.metadata.artist).toBe('');
@@ -1409,7 +1409,7 @@ test('ID3v1.0: Test case 139: An ID3 tag with genre set to Euro-House. Only the 
 	expect(id3.metadata.genre).toBe('Euro-House');
 });
 
-test('ID3v1.0: Test case 140: An ID3 tag with genre set to Dance Hall. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 140: An ID3 tag with genre set to Dance Hall. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_140_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Dance Hall');
 	expect(id3.metadata.artist).toBe('');
@@ -1419,7 +1419,7 @@ test('ID3v1.0: Test case 140: An ID3 tag with genre set to Dance Hall. Only the 
 	expect(id3.metadata.genre).toBe('Dance Hall');
 });
 
-test('ID3v1.0: Test case 141: An ID3 tag with genre set to Goa. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 141: An ID3 tag with genre set to Goa. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_141_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Goa');
 	expect(id3.metadata.artist).toBe('');
@@ -1429,7 +1429,7 @@ test('ID3v1.0: Test case 141: An ID3 tag with genre set to Goa. Only the first 8
 	expect(id3.metadata.genre).toBe('Goa');
 });
 
-test('ID3v1.0: Test case 142: An ID3 tag with genre set to Drum & Bass. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 142: An ID3 tag with genre set to Drum & Bass. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_142_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Drum & Bass');
 	expect(id3.metadata.artist).toBe('');
@@ -1439,7 +1439,7 @@ test('ID3v1.0: Test case 142: An ID3 tag with genre set to Drum & Bass. Only the
 	expect(id3.metadata.genre).toBe('Drum & Bass');
 });
 
-test('ID3v1.0: Test case 143: An ID3 tag with genre set to Club-House. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 143: An ID3 tag with genre set to Club-House. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_143_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Club-House');
 	expect(id3.metadata.artist).toBe('');
@@ -1449,7 +1449,7 @@ test('ID3v1.0: Test case 143: An ID3 tag with genre set to Club-House. Only the 
 	expect(id3.metadata.genre).toBe('Club-House');
 });
 
-test('ID3v1.0: Test case 144: An ID3 tag with genre set to Hardcore. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 144: An ID3 tag with genre set to Hardcore. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_144_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Hardcore');
 	expect(id3.metadata.artist).toBe('');
@@ -1459,7 +1459,7 @@ test('ID3v1.0: Test case 144: An ID3 tag with genre set to Hardcore. Only the fi
 	expect(id3.metadata.genre).toBe('Hardcore');
 });
 
-test('ID3v1.0: Test case 145: An ID3 tag with genre set to Terror. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 145: An ID3 tag with genre set to Terror. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_145_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Terror');
 	expect(id3.metadata.artist).toBe('');
@@ -1469,7 +1469,7 @@ test('ID3v1.0: Test case 145: An ID3 tag with genre set to Terror. Only the firs
 	expect(id3.metadata.genre).toBe('Terror');
 });
 
-test('ID3v1.0: Test case 146: An ID3 tag with genre set to Indie. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 146: An ID3 tag with genre set to Indie. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_146_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Indie');
 	expect(id3.metadata.artist).toBe('');
@@ -1479,7 +1479,7 @@ test('ID3v1.0: Test case 146: An ID3 tag with genre set to Indie. Only the first
 	expect(id3.metadata.genre).toBe('Indie');
 });
 
-test('ID3v1.0: Test case 147: An ID3 tag with genre set to BritPop. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 147: An ID3 tag with genre set to BritPop. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_147_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('BritPop');
 	expect(id3.metadata.artist).toBe('');
@@ -1489,7 +1489,7 @@ test('ID3v1.0: Test case 147: An ID3 tag with genre set to BritPop. Only the fir
 	expect(id3.metadata.genre).toBe('BritPop');
 });
 
-test('ID3v1.0: Test case 148: An ID3 tag with genre set to Negerpunk. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 148: An ID3 tag with genre set to Negerpunk. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_148_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Negerpunk');
 	expect(id3.metadata.artist).toBe('');
@@ -1499,7 +1499,7 @@ test('ID3v1.0: Test case 148: An ID3 tag with genre set to Negerpunk. Only the f
 	expect(id3.metadata.genre).toBe('Negerpunk');
 });
 
-test('ID3v1.0: Test case 149: An ID3 tag with genre set to Polsk Punk. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 149: An ID3 tag with genre set to Polsk Punk. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_149_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Polsk Punk');
 	expect(id3.metadata.artist).toBe('');
@@ -1509,7 +1509,7 @@ test('ID3v1.0: Test case 149: An ID3 tag with genre set to Polsk Punk. Only the 
 	expect(id3.metadata.genre).toBe('Polsk Punk');
 });
 
-test('ID3v1.0: Test case 150: An ID3 tag with genre set to Beat. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 150: An ID3 tag with genre set to Beat. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_150_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Beat');
 	expect(id3.metadata.artist).toBe('');
@@ -1519,7 +1519,7 @@ test('ID3v1.0: Test case 150: An ID3 tag with genre set to Beat. Only the first 
 	expect(id3.metadata.genre).toBe('Beat');
 });
 
-test('ID3v1.0: Test case 151: An ID3 tag with genre set to Christian. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 151: An ID3 tag with genre set to Christian. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_151_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Christian');
 	expect(id3.metadata.artist).toBe('');
@@ -1529,7 +1529,7 @@ test('ID3v1.0: Test case 151: An ID3 tag with genre set to Christian. Only the f
 	expect(id3.metadata.genre).toBe('Christian');
 });
 
-test('ID3v1.0: Test case 152: An ID3 tag with genre set to Heavy Metal. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 152: An ID3 tag with genre set to Heavy Metal. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_152_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Heavy Metal');
 	expect(id3.metadata.artist).toBe('');
@@ -1539,7 +1539,7 @@ test('ID3v1.0: Test case 152: An ID3 tag with genre set to Heavy Metal. Only the
 	expect(id3.metadata.genre).toBe('Heavy Metal');
 });
 
-test('ID3v1.0: Test case 153: An ID3 tag with genre set to Black Metal. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 153: An ID3 tag with genre set to Black Metal. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_153_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Black Metal');
 	expect(id3.metadata.artist).toBe('');
@@ -1549,7 +1549,7 @@ test('ID3v1.0: Test case 153: An ID3 tag with genre set to Black Metal. Only the
 	expect(id3.metadata.genre).toBe('Black Metal');
 });
 
-test('ID3v1.0: Test case 154: An ID3 tag with genre set to Crossover. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 154: An ID3 tag with genre set to Crossover. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_154_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Crossover');
 	expect(id3.metadata.artist).toBe('');
@@ -1559,7 +1559,7 @@ test('ID3v1.0: Test case 154: An ID3 tag with genre set to Crossover. Only the f
 	expect(id3.metadata.genre).toBe('Crossover');
 });
 
-test('ID3v1.0: Test case 155: An ID3 tag with genre set to Contemporary. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 155: An ID3 tag with genre set to Contemporary. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_155_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Contemporary');
 	expect(id3.metadata.artist).toBe('');
@@ -1569,7 +1569,7 @@ test('ID3v1.0: Test case 155: An ID3 tag with genre set to Contemporary. Only th
 	expect(id3.metadata.genre).toBe('Contemporary');
 });
 
-test('ID3v1.0: Test case 156: An ID3 tag with genre set to Christian Rock. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 156: An ID3 tag with genre set to Christian Rock. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_156_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Christian Rock');
 	expect(id3.metadata.artist).toBe('');
@@ -1579,7 +1579,7 @@ test('ID3v1.0: Test case 156: An ID3 tag with genre set to Christian Rock. Only 
 	expect(id3.metadata.genre).toBe('Christian Rock');
 });
 
-test('ID3v1.0: Test case 157: An ID3 tag with genre set to Merengue. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 157: An ID3 tag with genre set to Merengue. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_157_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Merengue');
 	expect(id3.metadata.artist).toBe('');
@@ -1589,7 +1589,7 @@ test('ID3v1.0: Test case 157: An ID3 tag with genre set to Merengue. Only the fi
 	expect(id3.metadata.genre).toBe('Merengue');
 });
 
-test('ID3v1.0: Test case 158: An ID3 tag with genre set to Salsa. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 158: An ID3 tag with genre set to Salsa. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_158_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Salsa');
 	expect(id3.metadata.artist).toBe('');
@@ -1599,7 +1599,7 @@ test('ID3v1.0: Test case 158: An ID3 tag with genre set to Salsa. Only the first
 	expect(id3.metadata.genre).toBe('Salsa');
 });
 
-test('ID3v1.0: Test case 159: An ID3 tag with genre set to Thrash Metal. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 159: An ID3 tag with genre set to Thrash Metal. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_159_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Thrash Metal');
 	expect(id3.metadata.artist).toBe('');
@@ -1609,7 +1609,7 @@ test('ID3v1.0: Test case 159: An ID3 tag with genre set to Thrash Metal. Only th
 	expect(id3.metadata.genre).toBe('Thrash Metal');
 });
 
-test('ID3v1.0: Test case 160: An ID3 tag with genre set to Anime. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 160: An ID3 tag with genre set to Anime. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_160_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Anime');
 	expect(id3.metadata.artist).toBe('');
@@ -1619,7 +1619,7 @@ test('ID3v1.0: Test case 160: An ID3 tag with genre set to Anime. Only the first
 	expect(id3.metadata.genre).toBe('Anime');
 });
 
-test('ID3v1.0: Test case 161: An ID3 tag with genre set to JPop. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 161: An ID3 tag with genre set to JPop. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_161_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('JPop');
 	expect(id3.metadata.artist).toBe('');
@@ -1629,7 +1629,7 @@ test('ID3v1.0: Test case 161: An ID3 tag with genre set to JPop. Only the first 
 	expect(id3.metadata.genre).toBe('JPop');
 });
 
-test('ID3v1.0: Test case 162: An ID3 tag with genre set to Synthpop. Only the first 80 genres are defined in the original ID3. Test case might generate a decoding warning.', () => {
+test('ID3v1.0: Test case 162: An ID3 tag with genre set to Synthpop. Only the first 80 genres are defined in the original ID3.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_162_genre_W.mp3'));
 	expect(id3.metadata.title).toBe('Synthpop');
 	expect(id3.metadata.artist).toBe('');
@@ -1639,7 +1639,7 @@ test('ID3v1.0: Test case 162: An ID3 tag with genre set to Synthpop. Only the fi
 	expect(id3.metadata.genre).toBe('Synthpop');
 });
 
-test('ID3v1.0: Test case 163: An ID3 tag with genre set to 148. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 163: An ID3 tag with genre set to 148.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_163_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/148');
 	expect(id3.metadata.artist).toBe('');
@@ -1649,7 +1649,7 @@ test('ID3v1.0: Test case 163: An ID3 tag with genre set to 148. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 164: An ID3 tag with genre set to 149. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 164: An ID3 tag with genre set to 149.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_164_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/149');
 	expect(id3.metadata.artist).toBe('');
@@ -1659,7 +1659,7 @@ test('ID3v1.0: Test case 164: An ID3 tag with genre set to 149. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 165: An ID3 tag with genre set to 150. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 165: An ID3 tag with genre set to 150.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_165_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/150');
 	expect(id3.metadata.artist).toBe('');
@@ -1669,7 +1669,7 @@ test('ID3v1.0: Test case 165: An ID3 tag with genre set to 150. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 166: An ID3 tag with genre set to 151. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 166: An ID3 tag with genre set to 151.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_166_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/151');
 	expect(id3.metadata.artist).toBe('');
@@ -1679,7 +1679,7 @@ test('ID3v1.0: Test case 166: An ID3 tag with genre set to 151. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 167: An ID3 tag with genre set to 152. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 167: An ID3 tag with genre set to 152.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_167_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/152');
 	expect(id3.metadata.artist).toBe('');
@@ -1689,7 +1689,7 @@ test('ID3v1.0: Test case 167: An ID3 tag with genre set to 152. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 168: An ID3 tag with genre set to 153. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 168: An ID3 tag with genre set to 153.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_168_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/153');
 	expect(id3.metadata.artist).toBe('');
@@ -1699,7 +1699,7 @@ test('ID3v1.0: Test case 168: An ID3 tag with genre set to 153. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 169: An ID3 tag with genre set to 154. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 169: An ID3 tag with genre set to 154.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_169_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/154');
 	expect(id3.metadata.artist).toBe('');
@@ -1709,7 +1709,7 @@ test('ID3v1.0: Test case 169: An ID3 tag with genre set to 154. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 170: An ID3 tag with genre set to 155. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 170: An ID3 tag with genre set to 155.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_170_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/155');
 	expect(id3.metadata.artist).toBe('');
@@ -1719,7 +1719,7 @@ test('ID3v1.0: Test case 170: An ID3 tag with genre set to 155. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 171: An ID3 tag with genre set to 156. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 171: An ID3 tag with genre set to 156.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_171_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/156');
 	expect(id3.metadata.artist).toBe('');
@@ -1729,7 +1729,7 @@ test('ID3v1.0: Test case 171: An ID3 tag with genre set to 156. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 172: An ID3 tag with genre set to 157. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 172: An ID3 tag with genre set to 157.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_172_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/157');
 	expect(id3.metadata.artist).toBe('');
@@ -1739,7 +1739,7 @@ test('ID3v1.0: Test case 172: An ID3 tag with genre set to 157. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 173: An ID3 tag with genre set to 158. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 173: An ID3 tag with genre set to 158.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_173_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/158');
 	expect(id3.metadata.artist).toBe('');
@@ -1749,7 +1749,7 @@ test('ID3v1.0: Test case 173: An ID3 tag with genre set to 158. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 174: An ID3 tag with genre set to 159. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 174: An ID3 tag with genre set to 159.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_174_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/159');
 	expect(id3.metadata.artist).toBe('');
@@ -1759,7 +1759,7 @@ test('ID3v1.0: Test case 174: An ID3 tag with genre set to 159. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 175: An ID3 tag with genre set to 160. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 175: An ID3 tag with genre set to 160.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_175_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/160');
 	expect(id3.metadata.artist).toBe('');
@@ -1769,7 +1769,7 @@ test('ID3v1.0: Test case 175: An ID3 tag with genre set to 160. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 176: An ID3 tag with genre set to 161. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 176: An ID3 tag with genre set to 161.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_176_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/161');
 	expect(id3.metadata.artist).toBe('');
@@ -1779,7 +1779,7 @@ test('ID3v1.0: Test case 176: An ID3 tag with genre set to 161. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 177: An ID3 tag with genre set to 162. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 177: An ID3 tag with genre set to 162.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_177_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/162');
 	expect(id3.metadata.artist).toBe('');
@@ -1789,7 +1789,7 @@ test('ID3v1.0: Test case 177: An ID3 tag with genre set to 162. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 178: An ID3 tag with genre set to 163. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 178: An ID3 tag with genre set to 163.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_178_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/163');
 	expect(id3.metadata.artist).toBe('');
@@ -1799,7 +1799,7 @@ test('ID3v1.0: Test case 178: An ID3 tag with genre set to 163. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 179: An ID3 tag with genre set to 164. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 179: An ID3 tag with genre set to 164.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_179_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/164');
 	expect(id3.metadata.artist).toBe('');
@@ -1809,7 +1809,7 @@ test('ID3v1.0: Test case 179: An ID3 tag with genre set to 164. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 180: An ID3 tag with genre set to 165. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 180: An ID3 tag with genre set to 165.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_180_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/165');
 	expect(id3.metadata.artist).toBe('');
@@ -1819,7 +1819,7 @@ test('ID3v1.0: Test case 180: An ID3 tag with genre set to 165. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 181: An ID3 tag with genre set to 166. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 181: An ID3 tag with genre set to 166.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_181_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/166');
 	expect(id3.metadata.artist).toBe('');
@@ -1829,7 +1829,7 @@ test('ID3v1.0: Test case 181: An ID3 tag with genre set to 166. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 182: An ID3 tag with genre set to 167. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 182: An ID3 tag with genre set to 167.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_182_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/167');
 	expect(id3.metadata.artist).toBe('');
@@ -1839,7 +1839,7 @@ test('ID3v1.0: Test case 182: An ID3 tag with genre set to 167. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 183: An ID3 tag with genre set to 168. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 183: An ID3 tag with genre set to 168.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_183_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/168');
 	expect(id3.metadata.artist).toBe('');
@@ -1849,7 +1849,7 @@ test('ID3v1.0: Test case 183: An ID3 tag with genre set to 168. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 184: An ID3 tag with genre set to 169. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 184: An ID3 tag with genre set to 169.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_184_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/169');
 	expect(id3.metadata.artist).toBe('');
@@ -1859,7 +1859,7 @@ test('ID3v1.0: Test case 184: An ID3 tag with genre set to 169. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 185: An ID3 tag with genre set to 170. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 185: An ID3 tag with genre set to 170.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_185_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/170');
 	expect(id3.metadata.artist).toBe('');
@@ -1869,7 +1869,7 @@ test('ID3v1.0: Test case 185: An ID3 tag with genre set to 170. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 186: An ID3 tag with genre set to 171. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 186: An ID3 tag with genre set to 171.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_186_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/171');
 	expect(id3.metadata.artist).toBe('');
@@ -1879,7 +1879,7 @@ test('ID3v1.0: Test case 186: An ID3 tag with genre set to 171. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 187: An ID3 tag with genre set to 172. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 187: An ID3 tag with genre set to 172.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_187_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/172');
 	expect(id3.metadata.artist).toBe('');
@@ -1889,7 +1889,7 @@ test('ID3v1.0: Test case 187: An ID3 tag with genre set to 172. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 188: An ID3 tag with genre set to 173. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 188: An ID3 tag with genre set to 173.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_188_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/173');
 	expect(id3.metadata.artist).toBe('');
@@ -1899,7 +1899,7 @@ test('ID3v1.0: Test case 188: An ID3 tag with genre set to 173. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 189: An ID3 tag with genre set to 174. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 189: An ID3 tag with genre set to 174.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_189_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/174');
 	expect(id3.metadata.artist).toBe('');
@@ -1909,7 +1909,7 @@ test('ID3v1.0: Test case 189: An ID3 tag with genre set to 174. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 190: An ID3 tag with genre set to 175. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 190: An ID3 tag with genre set to 175.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_190_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/175');
 	expect(id3.metadata.artist).toBe('');
@@ -1919,7 +1919,7 @@ test('ID3v1.0: Test case 190: An ID3 tag with genre set to 175. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 191: An ID3 tag with genre set to 176. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 191: An ID3 tag with genre set to 176.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_191_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/176');
 	expect(id3.metadata.artist).toBe('');
@@ -1929,7 +1929,7 @@ test('ID3v1.0: Test case 191: An ID3 tag with genre set to 176. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 192: An ID3 tag with genre set to 177. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 192: An ID3 tag with genre set to 177.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_192_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/177');
 	expect(id3.metadata.artist).toBe('');
@@ -1939,7 +1939,7 @@ test('ID3v1.0: Test case 192: An ID3 tag with genre set to 177. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 193: An ID3 tag with genre set to 178. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 193: An ID3 tag with genre set to 178.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_193_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/178');
 	expect(id3.metadata.artist).toBe('');
@@ -1949,7 +1949,7 @@ test('ID3v1.0: Test case 193: An ID3 tag with genre set to 178. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 194: An ID3 tag with genre set to 179. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 194: An ID3 tag with genre set to 179.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_194_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/179');
 	expect(id3.metadata.artist).toBe('');
@@ -1959,7 +1959,7 @@ test('ID3v1.0: Test case 194: An ID3 tag with genre set to 179. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 195: An ID3 tag with genre set to 180. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 195: An ID3 tag with genre set to 180.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_195_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/180');
 	expect(id3.metadata.artist).toBe('');
@@ -1969,7 +1969,7 @@ test('ID3v1.0: Test case 195: An ID3 tag with genre set to 180. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 196: An ID3 tag with genre set to 181. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 196: An ID3 tag with genre set to 181.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_196_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/181');
 	expect(id3.metadata.artist).toBe('');
@@ -1979,7 +1979,7 @@ test('ID3v1.0: Test case 196: An ID3 tag with genre set to 181. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 197: An ID3 tag with genre set to 182. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 197: An ID3 tag with genre set to 182.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_197_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/182');
 	expect(id3.metadata.artist).toBe('');
@@ -1989,7 +1989,7 @@ test('ID3v1.0: Test case 197: An ID3 tag with genre set to 182. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 198: An ID3 tag with genre set to 183. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 198: An ID3 tag with genre set to 183.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_198_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/183');
 	expect(id3.metadata.artist).toBe('');
@@ -1999,7 +1999,7 @@ test('ID3v1.0: Test case 198: An ID3 tag with genre set to 183. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 199: An ID3 tag with genre set to 184. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 199: An ID3 tag with genre set to 184.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_199_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/184');
 	expect(id3.metadata.artist).toBe('');
@@ -2009,7 +2009,7 @@ test('ID3v1.0: Test case 199: An ID3 tag with genre set to 184. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 200: An ID3 tag with genre set to 185. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 200: An ID3 tag with genre set to 185.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_200_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/185');
 	expect(id3.metadata.artist).toBe('');
@@ -2019,7 +2019,7 @@ test('ID3v1.0: Test case 200: An ID3 tag with genre set to 185. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 201: An ID3 tag with genre set to 186. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 201: An ID3 tag with genre set to 186.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_201_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/186');
 	expect(id3.metadata.artist).toBe('');
@@ -2029,7 +2029,7 @@ test('ID3v1.0: Test case 201: An ID3 tag with genre set to 186. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 202: An ID3 tag with genre set to 187. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 202: An ID3 tag with genre set to 187.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_202_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/187');
 	expect(id3.metadata.artist).toBe('');
@@ -2039,7 +2039,7 @@ test('ID3v1.0: Test case 202: An ID3 tag with genre set to 187. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 203: An ID3 tag with genre set to 188. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 203: An ID3 tag with genre set to 188.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_203_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/188');
 	expect(id3.metadata.artist).toBe('');
@@ -2049,7 +2049,7 @@ test('ID3v1.0: Test case 203: An ID3 tag with genre set to 188. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 204: An ID3 tag with genre set to 189. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 204: An ID3 tag with genre set to 189.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_204_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/189');
 	expect(id3.metadata.artist).toBe('');
@@ -2059,7 +2059,7 @@ test('ID3v1.0: Test case 204: An ID3 tag with genre set to 189. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 205: An ID3 tag with genre set to 190. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 205: An ID3 tag with genre set to 190.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_205_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/190');
 	expect(id3.metadata.artist).toBe('');
@@ -2069,7 +2069,7 @@ test('ID3v1.0: Test case 205: An ID3 tag with genre set to 190. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 206: An ID3 tag with genre set to 191. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 206: An ID3 tag with genre set to 191.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_206_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/191');
 	expect(id3.metadata.artist).toBe('');
@@ -2079,7 +2079,7 @@ test('ID3v1.0: Test case 206: An ID3 tag with genre set to 191. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 207: An ID3 tag with genre set to 192. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 207: An ID3 tag with genre set to 192.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_207_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/192');
 	expect(id3.metadata.artist).toBe('');
@@ -2089,7 +2089,7 @@ test('ID3v1.0: Test case 207: An ID3 tag with genre set to 192. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 208: An ID3 tag with genre set to 193. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 208: An ID3 tag with genre set to 193.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_208_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/193');
 	expect(id3.metadata.artist).toBe('');
@@ -2099,7 +2099,7 @@ test('ID3v1.0: Test case 208: An ID3 tag with genre set to 193. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 209: An ID3 tag with genre set to 194. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 209: An ID3 tag with genre set to 194.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_209_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/194');
 	expect(id3.metadata.artist).toBe('');
@@ -2109,7 +2109,7 @@ test('ID3v1.0: Test case 209: An ID3 tag with genre set to 194. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 210: An ID3 tag with genre set to 195. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 210: An ID3 tag with genre set to 195.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_210_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/195');
 	expect(id3.metadata.artist).toBe('');
@@ -2119,7 +2119,7 @@ test('ID3v1.0: Test case 210: An ID3 tag with genre set to 195. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 211: An ID3 tag with genre set to 196. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 211: An ID3 tag with genre set to 196.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_211_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/196');
 	expect(id3.metadata.artist).toBe('');
@@ -2129,7 +2129,7 @@ test('ID3v1.0: Test case 211: An ID3 tag with genre set to 196. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 212: An ID3 tag with genre set to 197. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 212: An ID3 tag with genre set to 197.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_212_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/197');
 	expect(id3.metadata.artist).toBe('');
@@ -2139,7 +2139,7 @@ test('ID3v1.0: Test case 212: An ID3 tag with genre set to 197. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 213: An ID3 tag with genre set to 198. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 213: An ID3 tag with genre set to 198.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_213_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/198');
 	expect(id3.metadata.artist).toBe('');
@@ -2149,7 +2149,7 @@ test('ID3v1.0: Test case 213: An ID3 tag with genre set to 198. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 214: An ID3 tag with genre set to 199. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 214: An ID3 tag with genre set to 199.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_214_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/199');
 	expect(id3.metadata.artist).toBe('');
@@ -2159,7 +2159,7 @@ test('ID3v1.0: Test case 214: An ID3 tag with genre set to 199. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 215: An ID3 tag with genre set to 200. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 215: An ID3 tag with genre set to 200.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_215_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/200');
 	expect(id3.metadata.artist).toBe('');
@@ -2169,7 +2169,7 @@ test('ID3v1.0: Test case 215: An ID3 tag with genre set to 200. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 216: An ID3 tag with genre set to 201. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 216: An ID3 tag with genre set to 201.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_216_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/201');
 	expect(id3.metadata.artist).toBe('');
@@ -2179,7 +2179,7 @@ test('ID3v1.0: Test case 216: An ID3 tag with genre set to 201. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 217: An ID3 tag with genre set to 202. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 217: An ID3 tag with genre set to 202.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_217_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/202');
 	expect(id3.metadata.artist).toBe('');
@@ -2189,7 +2189,7 @@ test('ID3v1.0: Test case 217: An ID3 tag with genre set to 202. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 218: An ID3 tag with genre set to 203. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 218: An ID3 tag with genre set to 203.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_218_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/203');
 	expect(id3.metadata.artist).toBe('');
@@ -2199,7 +2199,7 @@ test('ID3v1.0: Test case 218: An ID3 tag with genre set to 203. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 219: An ID3 tag with genre set to 204. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 219: An ID3 tag with genre set to 204.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_219_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/204');
 	expect(id3.metadata.artist).toBe('');
@@ -2209,7 +2209,7 @@ test('ID3v1.0: Test case 219: An ID3 tag with genre set to 204. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 220: An ID3 tag with genre set to 205. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 220: An ID3 tag with genre set to 205.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_220_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/205');
 	expect(id3.metadata.artist).toBe('');
@@ -2219,7 +2219,7 @@ test('ID3v1.0: Test case 220: An ID3 tag with genre set to 205. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 221: An ID3 tag with genre set to 206. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 221: An ID3 tag with genre set to 206.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_221_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/206');
 	expect(id3.metadata.artist).toBe('');
@@ -2229,7 +2229,7 @@ test('ID3v1.0: Test case 221: An ID3 tag with genre set to 206. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 222: An ID3 tag with genre set to 207. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 222: An ID3 tag with genre set to 207.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_222_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/207');
 	expect(id3.metadata.artist).toBe('');
@@ -2239,7 +2239,7 @@ test('ID3v1.0: Test case 222: An ID3 tag with genre set to 207. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 223: An ID3 tag with genre set to 208. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 223: An ID3 tag with genre set to 208.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_223_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/208');
 	expect(id3.metadata.artist).toBe('');
@@ -2249,7 +2249,7 @@ test('ID3v1.0: Test case 223: An ID3 tag with genre set to 208. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 224: An ID3 tag with genre set to 209. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 224: An ID3 tag with genre set to 209.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_224_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/209');
 	expect(id3.metadata.artist).toBe('');
@@ -2259,7 +2259,7 @@ test('ID3v1.0: Test case 224: An ID3 tag with genre set to 209. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 225: An ID3 tag with genre set to 210. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 225: An ID3 tag with genre set to 210.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_225_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/210');
 	expect(id3.metadata.artist).toBe('');
@@ -2269,7 +2269,7 @@ test('ID3v1.0: Test case 225: An ID3 tag with genre set to 210. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 226: An ID3 tag with genre set to 211. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 226: An ID3 tag with genre set to 211.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_226_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/211');
 	expect(id3.metadata.artist).toBe('');
@@ -2279,7 +2279,7 @@ test('ID3v1.0: Test case 226: An ID3 tag with genre set to 211. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 227: An ID3 tag with genre set to 212. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 227: An ID3 tag with genre set to 212.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_227_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/212');
 	expect(id3.metadata.artist).toBe('');
@@ -2289,7 +2289,7 @@ test('ID3v1.0: Test case 227: An ID3 tag with genre set to 212. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 228: An ID3 tag with genre set to 213. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 228: An ID3 tag with genre set to 213.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_228_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/213');
 	expect(id3.metadata.artist).toBe('');
@@ -2299,7 +2299,7 @@ test('ID3v1.0: Test case 228: An ID3 tag with genre set to 213. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 229: An ID3 tag with genre set to 214. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 229: An ID3 tag with genre set to 214.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_229_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/214');
 	expect(id3.metadata.artist).toBe('');
@@ -2309,7 +2309,7 @@ test('ID3v1.0: Test case 229: An ID3 tag with genre set to 214. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 230: An ID3 tag with genre set to 215. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 230: An ID3 tag with genre set to 215.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_230_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/215');
 	expect(id3.metadata.artist).toBe('');
@@ -2319,7 +2319,7 @@ test('ID3v1.0: Test case 230: An ID3 tag with genre set to 215. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 231: An ID3 tag with genre set to 216. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 231: An ID3 tag with genre set to 216.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_231_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/216');
 	expect(id3.metadata.artist).toBe('');
@@ -2329,7 +2329,7 @@ test('ID3v1.0: Test case 231: An ID3 tag with genre set to 216. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 232: An ID3 tag with genre set to 217. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 232: An ID3 tag with genre set to 217.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_232_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/217');
 	expect(id3.metadata.artist).toBe('');
@@ -2339,7 +2339,7 @@ test('ID3v1.0: Test case 232: An ID3 tag with genre set to 217. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 233: An ID3 tag with genre set to 218. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 233: An ID3 tag with genre set to 218.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_233_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/218');
 	expect(id3.metadata.artist).toBe('');
@@ -2349,7 +2349,7 @@ test('ID3v1.0: Test case 233: An ID3 tag with genre set to 218. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 234: An ID3 tag with genre set to 219. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 234: An ID3 tag with genre set to 219.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_234_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/219');
 	expect(id3.metadata.artist).toBe('');
@@ -2359,7 +2359,7 @@ test('ID3v1.0: Test case 234: An ID3 tag with genre set to 219. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 235: An ID3 tag with genre set to 220. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 235: An ID3 tag with genre set to 220.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_235_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/220');
 	expect(id3.metadata.artist).toBe('');
@@ -2369,7 +2369,7 @@ test('ID3v1.0: Test case 235: An ID3 tag with genre set to 220. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 236: An ID3 tag with genre set to 221. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 236: An ID3 tag with genre set to 221.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_236_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/221');
 	expect(id3.metadata.artist).toBe('');
@@ -2379,7 +2379,7 @@ test('ID3v1.0: Test case 236: An ID3 tag with genre set to 221. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 237: An ID3 tag with genre set to 222. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 237: An ID3 tag with genre set to 222.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_237_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/222');
 	expect(id3.metadata.artist).toBe('');
@@ -2389,7 +2389,7 @@ test('ID3v1.0: Test case 237: An ID3 tag with genre set to 222. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 238: An ID3 tag with genre set to 223. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 238: An ID3 tag with genre set to 223.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_238_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/223');
 	expect(id3.metadata.artist).toBe('');
@@ -2399,7 +2399,7 @@ test('ID3v1.0: Test case 238: An ID3 tag with genre set to 223. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 239: An ID3 tag with genre set to 224. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 239: An ID3 tag with genre set to 224.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_239_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/224');
 	expect(id3.metadata.artist).toBe('');
@@ -2409,7 +2409,7 @@ test('ID3v1.0: Test case 239: An ID3 tag with genre set to 224. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 240: An ID3 tag with genre set to 225. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 240: An ID3 tag with genre set to 225.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_240_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/225');
 	expect(id3.metadata.artist).toBe('');
@@ -2419,7 +2419,7 @@ test('ID3v1.0: Test case 240: An ID3 tag with genre set to 225. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 241: An ID3 tag with genre set to 226. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 241: An ID3 tag with genre set to 226.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_241_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/226');
 	expect(id3.metadata.artist).toBe('');
@@ -2429,7 +2429,7 @@ test('ID3v1.0: Test case 241: An ID3 tag with genre set to 226. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 242: An ID3 tag with genre set to 227. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 242: An ID3 tag with genre set to 227.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_242_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/227');
 	expect(id3.metadata.artist).toBe('');
@@ -2439,7 +2439,7 @@ test('ID3v1.0: Test case 242: An ID3 tag with genre set to 227. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 243: An ID3 tag with genre set to 228. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 243: An ID3 tag with genre set to 228.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_243_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/228');
 	expect(id3.metadata.artist).toBe('');
@@ -2449,7 +2449,7 @@ test('ID3v1.0: Test case 243: An ID3 tag with genre set to 228. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 244: An ID3 tag with genre set to 229. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 244: An ID3 tag with genre set to 229.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_244_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/229');
 	expect(id3.metadata.artist).toBe('');
@@ -2459,7 +2459,7 @@ test('ID3v1.0: Test case 244: An ID3 tag with genre set to 229. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 245: An ID3 tag with genre set to 230. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 245: An ID3 tag with genre set to 230.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_245_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/230');
 	expect(id3.metadata.artist).toBe('');
@@ -2469,7 +2469,7 @@ test('ID3v1.0: Test case 245: An ID3 tag with genre set to 230. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 246: An ID3 tag with genre set to 231. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 246: An ID3 tag with genre set to 231.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_246_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/231');
 	expect(id3.metadata.artist).toBe('');
@@ -2479,7 +2479,7 @@ test('ID3v1.0: Test case 246: An ID3 tag with genre set to 231. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 247: An ID3 tag with genre set to 232. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 247: An ID3 tag with genre set to 232.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_247_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/232');
 	expect(id3.metadata.artist).toBe('');
@@ -2489,7 +2489,7 @@ test('ID3v1.0: Test case 247: An ID3 tag with genre set to 232. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 248: An ID3 tag with genre set to 233. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 248: An ID3 tag with genre set to 233.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_248_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/233');
 	expect(id3.metadata.artist).toBe('');
@@ -2499,7 +2499,7 @@ test('ID3v1.0: Test case 248: An ID3 tag with genre set to 233. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 249: An ID3 tag with genre set to 234. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 249: An ID3 tag with genre set to 234.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_249_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/234');
 	expect(id3.metadata.artist).toBe('');
@@ -2509,7 +2509,7 @@ test('ID3v1.0: Test case 249: An ID3 tag with genre set to 234. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 250: An ID3 tag with genre set to 235. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 250: An ID3 tag with genre set to 235.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_250_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/235');
 	expect(id3.metadata.artist).toBe('');
@@ -2519,7 +2519,7 @@ test('ID3v1.0: Test case 250: An ID3 tag with genre set to 235. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 251: An ID3 tag with genre set to 236. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 251: An ID3 tag with genre set to 236.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_251_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/236');
 	expect(id3.metadata.artist).toBe('');
@@ -2529,7 +2529,7 @@ test('ID3v1.0: Test case 251: An ID3 tag with genre set to 236. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 252: An ID3 tag with genre set to 237. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 252: An ID3 tag with genre set to 237.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_252_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/237');
 	expect(id3.metadata.artist).toBe('');
@@ -2539,7 +2539,7 @@ test('ID3v1.0: Test case 252: An ID3 tag with genre set to 237. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 253: An ID3 tag with genre set to 238. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 253: An ID3 tag with genre set to 238.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_253_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/238');
 	expect(id3.metadata.artist).toBe('');
@@ -2549,7 +2549,7 @@ test('ID3v1.0: Test case 253: An ID3 tag with genre set to 238. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 254: An ID3 tag with genre set to 239. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 254: An ID3 tag with genre set to 239.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_254_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/239');
 	expect(id3.metadata.artist).toBe('');
@@ -2559,7 +2559,7 @@ test('ID3v1.0: Test case 254: An ID3 tag with genre set to 239. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 255: An ID3 tag with genre set to 240. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 255: An ID3 tag with genre set to 240.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_255_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/240');
 	expect(id3.metadata.artist).toBe('');
@@ -2569,7 +2569,7 @@ test('ID3v1.0: Test case 255: An ID3 tag with genre set to 240. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 256: An ID3 tag with genre set to 241. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 256: An ID3 tag with genre set to 241.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_256_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/241');
 	expect(id3.metadata.artist).toBe('');
@@ -2579,7 +2579,7 @@ test('ID3v1.0: Test case 256: An ID3 tag with genre set to 241. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 257: An ID3 tag with genre set to 242. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 257: An ID3 tag with genre set to 242.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_257_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/242');
 	expect(id3.metadata.artist).toBe('');
@@ -2589,7 +2589,7 @@ test('ID3v1.0: Test case 257: An ID3 tag with genre set to 242. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 258: An ID3 tag with genre set to 243. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 258: An ID3 tag with genre set to 243.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_258_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/243');
 	expect(id3.metadata.artist).toBe('');
@@ -2599,7 +2599,7 @@ test('ID3v1.0: Test case 258: An ID3 tag with genre set to 243. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 259: An ID3 tag with genre set to 244. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 259: An ID3 tag with genre set to 244.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_259_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/244');
 	expect(id3.metadata.artist).toBe('');
@@ -2609,7 +2609,7 @@ test('ID3v1.0: Test case 259: An ID3 tag with genre set to 244. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 260: An ID3 tag with genre set to 245. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 260: An ID3 tag with genre set to 245.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_260_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/245');
 	expect(id3.metadata.artist).toBe('');
@@ -2619,7 +2619,7 @@ test('ID3v1.0: Test case 260: An ID3 tag with genre set to 245. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 261: An ID3 tag with genre set to 246. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 261: An ID3 tag with genre set to 246.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_261_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/246');
 	expect(id3.metadata.artist).toBe('');
@@ -2629,7 +2629,7 @@ test('ID3v1.0: Test case 261: An ID3 tag with genre set to 246. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 262: An ID3 tag with genre set to 247. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 262: An ID3 tag with genre set to 247.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_262_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/247');
 	expect(id3.metadata.artist).toBe('');
@@ -2639,7 +2639,7 @@ test('ID3v1.0: Test case 262: An ID3 tag with genre set to 247. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 263: An ID3 tag with genre set to 248. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 263: An ID3 tag with genre set to 248.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_263_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/248');
 	expect(id3.metadata.artist).toBe('');
@@ -2649,7 +2649,7 @@ test('ID3v1.0: Test case 263: An ID3 tag with genre set to 248. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 264: An ID3 tag with genre set to 249. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 264: An ID3 tag with genre set to 249.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_264_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/249');
 	expect(id3.metadata.artist).toBe('');
@@ -2659,7 +2659,7 @@ test('ID3v1.0: Test case 264: An ID3 tag with genre set to 249. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 265: An ID3 tag with genre set to 250. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 265: An ID3 tag with genre set to 250.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_265_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/250');
 	expect(id3.metadata.artist).toBe('');
@@ -2669,7 +2669,7 @@ test('ID3v1.0: Test case 265: An ID3 tag with genre set to 250. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 266: An ID3 tag with genre set to 251. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 266: An ID3 tag with genre set to 251.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_266_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/251');
 	expect(id3.metadata.artist).toBe('');
@@ -2679,7 +2679,7 @@ test('ID3v1.0: Test case 266: An ID3 tag with genre set to 251. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 267: An ID3 tag with genre set to 252. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 267: An ID3 tag with genre set to 252.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_267_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/252');
 	expect(id3.metadata.artist).toBe('');
@@ -2689,7 +2689,7 @@ test('ID3v1.0: Test case 267: An ID3 tag with genre set to 252. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 268: An ID3 tag with genre set to 253. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 268: An ID3 tag with genre set to 253.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_268_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/253');
 	expect(id3.metadata.artist).toBe('');
@@ -2699,7 +2699,7 @@ test('ID3v1.0: Test case 268: An ID3 tag with genre set to 253. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 269: An ID3 tag with genre set to 254. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 269: An ID3 tag with genre set to 254.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_269_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/254');
 	expect(id3.metadata.artist).toBe('');
@@ -2709,7 +2709,7 @@ test('ID3v1.0: Test case 269: An ID3 tag with genre set to 254. Test case should
 	expect(id3.metadata.genre).toBe('Unknown');
 });
 
-test('ID3v1.0: Test case 270: An ID3 tag with genre set to 255. Test case should generate a decoding failure.', () => {
+test('ID3v1.0: Test case 270: An ID3 tag with genre set to 255.', () => {
 	const id3 = readID3(readTestFile('id3v1/id3v1_270_genre_F.mp3'));
 	expect(id3.metadata.title).toBe('Unknown/255');
 	expect(id3.metadata.artist).toBe('');
