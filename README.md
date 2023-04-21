@@ -14,3 +14,4 @@ Research material for how the ID3 tag works in various versions of it. Most of i
 - [web.archive.org: id3v2.4.0-frames.txt](https://web.archive.org/web/20211109170227/https://id3.org/id3v2.4.0-frames)
 - [web.archive.org: id3v2.4.0-changes.txt](https://web.archive.org/web/20210807160919/https://id3.org/id3v2.4.0-changes)
 - [web.archive.org: ID3v2 Programming Guidlines](https://web.archive.org/web/20211122000720/https://id3.org/Developer%20Information)
+- [web.archive.org: id3.org: id3v1_test_suite.tar.gz](https://web.archive.org/web/20070421084950if_/http://www.id3.org:80/Developer_Information?action=AttachFile&do=get&target=id3v1_test_suite.tar.gz)
