@@ -18,6 +18,15 @@ const readIDv1 = (file) => {
 
 	const genreIndex = getUInt8(tag, 127);
 
+	const containsTrack = getUInt8(tag, 125) === 0;
+	let track = null;
+	if (containsTrack) {
+		const trackInt = getUInt8(tag, 126);
+		if (trackInt > 0) {
+			track = trackInt;
+		}
+	}
+
 	return {
 		version: 'ID3v1',
 		metadata: {
@@ -25,7 +34,8 @@ const readIDv1 = (file) => {
 			artist: readChars(tag, 33, 30).trim(),
 			album: readChars(tag, 63, 30).trim(),
 			year: readChars(tag, 93, 4).trim(),
-			comment: readChars(tag, 97, 30).trim(),
+			comment: readChars(tag, 97, containsTrack ? 28 : 30).trim(),
+			track: track,
 			genre: genreIndex in genre ? genre[genreIndex] : 'Unknown',
 		},
 	};
