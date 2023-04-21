@@ -39,23 +39,26 @@ const readID3v1 = (file) => {
 };
 
 const readID3v2 = (file) => {
-	const id3Tag = readChars(file, 0, 3);
-
-	if (id3Tag !== 'ID3') {
+	// The first 3 bytes of the file should write out 'ID3' for v2
+	if (readChars(file, 0, 3) !== 'ID3') {
 		return null;
 	}
 
-	const minor = getUInt8(file, 3);
-	const patch = getUInt8(file, 4);
+	// We get the size first so we can trim down to the ID3 tag only and work from that
+	const size = getUInt32(file, 6);
+	const id3 = file.slice(0, size + 10);
+
+	const minor = getUInt8(id3, 3);
+	const patch = getUInt8(id3, 4);
 
 	return {
-		version: `${id3Tag}v2.${minor}.${patch}`,
+		version: `ID3v2.${minor}.${patch}`,
 		flags: {
-			unsynchronisation: ((file[5] & 0x40) >> 6) === 1,
-			extendedHeader: ((file[5] & 0x20) >> 5) === 1,
-			experimentalIndicator: ((file[5] & 0x10) >> 4) === 1,
+			unsynchronisation: ((id3[5] & 0x40) >> 6) === 1,
+			extendedHeader: ((id3[5] & 0x20) >> 5) === 1,
+			experimentalIndicator: ((id3[5] & 0x10) >> 4) === 1,
 		},
-		size: getUInt32(file, 6),
+		size: size,
 	};
 };
 
