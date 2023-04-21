@@ -7,7 +7,7 @@ Test cases that tests basic tag capabilities.
 
 Test case 1
 Generated test file "id3v1_001_basic.mp3"
-An ordinary ID3v1 tag with all fields set to a plauseble value.       
+An ordinary ID3v1 tag with all fields set to a plausible value.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -20,7 +20,7 @@ genre  : 7 (Hip-Hop)
 
 Test case 2
 Generated test file "id3v1_002_basic.mp3"
-An ordinary ID3v1.1 tag with all fields set to a plauseble value.     
+An ordinary ID3v1.1 tag with all fields set to a plausible value.
 Tag structure
 version: 1.1
 head   : "TAG"
@@ -34,7 +34,7 @@ genre  : 7 (Hip-Hop)
 
 Test case 3
 Generated test file "id3v1_003_basic_F.mp3"
-An ID3 tag with its header in the wrong case.                         
+An ID3 tag with its header in the wrong case.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -48,7 +48,7 @@ genre  : 0 (Blues)
 
 Test case 4
 Generated test file "id3v1_004_basic.mp3"
-An ID3 tag with all fields set to shortest legal value.               
+An ID3 tag with all fields set to shortest legal value.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -61,7 +61,7 @@ genre  : 0 (Blues)
 
 Test case 5
 Generated test file "id3v1_005_basic.mp3"
-An ID3v1 tag with all fields set to longest value.                    
+An ID3v1 tag with all fields set to longest value.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -74,7 +74,7 @@ genre  : 0 (Blues)
 
 Test case 6
 Generated test file "id3v1_006_basic.mp3"
-An ID3v1.1 tag with all fields set to longest value.                  
+An ID3v1.1 tag with all fields set to longest value.
 Tag structure
 version: 1.1
 head   : "TAG"
@@ -88,8 +88,8 @@ genre  : 0 (Blues)
 
 Test case 7
 Generated test file "id3v1_007_basic_W.mp3"
-An ID3v1 tag with junk after string terminator. The junk should not   
-show up for the user (i.e. only the string 12345 should show up).     
+An ID3v1 tag with junk after string terminator. The junk should not
+show up for the user (i.e. only the string 12345 should show up).
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -103,8 +103,8 @@ genre  : 0 (Blues)
 
 Test case 8
 Generated test file "id3v1_008_basic_W.mp3"
-An ID3v1 tag with junk after string terminator. The junk should not   
-show up for the user (i.e. only the string 12345 should show up).     
+An ID3v1 tag with junk after string terminator. The junk should not
+show up for the user (i.e. only the string 12345 should show up).
 Test case might generate a decoding warning.
 Tag structure
 version: 1.1
@@ -119,7 +119,7 @@ genre  : 0 (Blues)
 
 Test case 9
 Generated test file "id3v1_009_basic.mp3"
-An ID3 tag with the track number set to max (255).                    
+An ID3 tag with the track number set to max (255).
 Tag structure
 version: 1.1
 head   : "TAG"
@@ -136,7 +136,7 @@ Different tests that tries to break the year parser.
 
 Test case 10
 Generated test file "id3v1_010_year.mp3"
-An ID3 tag with the year set to 0000.                                 
+An ID3 tag with the year set to 0000.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -149,7 +149,7 @@ genre  : 0 (Blues)
 
 Test case 11
 Generated test file "id3v1_011_year.mp3"
-An ID3 tag with the year set to 9999.                                 
+An ID3 tag with the year set to 9999.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -162,7 +162,7 @@ genre  : 0 (Blues)
 
 Test case 12
 Generated test file "id3v1_012_year_F.mp3"
-An ID3 tag with the year set to "   3".                               
+An ID3 tag with the year set to "   3".
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -176,7 +176,7 @@ genre  : 0 (Blues)
 
 Test case 13
 Generated test file "id3v1_013_year_F.mp3"
-An ID3 tag with the year set to "112\0".                              
+An ID3 tag with the year set to "112\0".
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -190,7 +190,7 @@ genre  : 0 (Blues)
 
 Test case 14
 Generated test file "id3v1_014_year_F.mp3"
-An ID3 tag with the year set to NULL.                                 
+An ID3 tag with the year set to NULL.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -207,7 +207,7 @@ Tests that tests the genre capabilities.
 
 Test case 15
 Generated test file "id3v1_015_genre.mp3"
-An ID3 tag with genre set to Blues.                                   
+An ID3 tag with genre set to Blues.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -220,7 +220,7 @@ genre  : 0 (Blues)
 
 Test case 16
 Generated test file "id3v1_016_genre.mp3"
-An ID3 tag with genre set to Classic Rock.                            
+An ID3 tag with genre set to Classic Rock.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -233,7 +233,7 @@ genre  : 1 (Classic Rock)
 
 Test case 17
 Generated test file "id3v1_017_genre.mp3"
-An ID3 tag with genre set to Country.                                 
+An ID3 tag with genre set to Country.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -246,7 +246,7 @@ genre  : 2 (Country)
 
 Test case 18
 Generated test file "id3v1_018_genre.mp3"
-An ID3 tag with genre set to Dance.                                   
+An ID3 tag with genre set to Dance.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -259,7 +259,7 @@ genre  : 3 (Dance)
 
 Test case 19
 Generated test file "id3v1_019_genre.mp3"
-An ID3 tag with genre set to Disco.                                   
+An ID3 tag with genre set to Disco.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -272,7 +272,7 @@ genre  : 4 (Disco)
 
 Test case 20
 Generated test file "id3v1_020_genre.mp3"
-An ID3 tag with genre set to Funk.                                    
+An ID3 tag with genre set to Funk.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -285,7 +285,7 @@ genre  : 5 (Funk)
 
 Test case 21
 Generated test file "id3v1_021_genre.mp3"
-An ID3 tag with genre set to Grunge.                                  
+An ID3 tag with genre set to Grunge.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -298,7 +298,7 @@ genre  : 6 (Grunge)
 
 Test case 22
 Generated test file "id3v1_022_genre.mp3"
-An ID3 tag with genre set to Hip-Hop.                                 
+An ID3 tag with genre set to Hip-Hop.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -311,7 +311,7 @@ genre  : 7 (Hip-Hop)
 
 Test case 23
 Generated test file "id3v1_023_genre.mp3"
-An ID3 tag with genre set to Jazz.                                    
+An ID3 tag with genre set to Jazz.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -324,7 +324,7 @@ genre  : 8 (Jazz)
 
 Test case 24
 Generated test file "id3v1_024_genre.mp3"
-An ID3 tag with genre set to Metal.                                   
+An ID3 tag with genre set to Metal.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -337,7 +337,7 @@ genre  : 9 (Metal)
 
 Test case 25
 Generated test file "id3v1_025_genre.mp3"
-An ID3 tag with genre set to New Age.                                 
+An ID3 tag with genre set to New Age.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -350,7 +350,7 @@ genre  : 10 (New Age)
 
 Test case 26
 Generated test file "id3v1_026_genre.mp3"
-An ID3 tag with genre set to Oldies.                                  
+An ID3 tag with genre set to Oldies.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -363,7 +363,7 @@ genre  : 11 (Oldies)
 
 Test case 27
 Generated test file "id3v1_027_genre.mp3"
-An ID3 tag with genre set to Other.                                   
+An ID3 tag with genre set to Other.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -376,7 +376,7 @@ genre  : 12 (Other)
 
 Test case 28
 Generated test file "id3v1_028_genre.mp3"
-An ID3 tag with genre set to Pop.                                     
+An ID3 tag with genre set to Pop.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -389,7 +389,7 @@ genre  : 13 (Pop)
 
 Test case 29
 Generated test file "id3v1_029_genre.mp3"
-An ID3 tag with genre set to R&B.                                     
+An ID3 tag with genre set to R&B.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -402,7 +402,7 @@ genre  : 14 (R&B)
 
 Test case 30
 Generated test file "id3v1_030_genre.mp3"
-An ID3 tag with genre set to Rap.                                     
+An ID3 tag with genre set to Rap.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -415,7 +415,7 @@ genre  : 15 (Rap)
 
 Test case 31
 Generated test file "id3v1_031_genre.mp3"
-An ID3 tag with genre set to Reggae.                                  
+An ID3 tag with genre set to Reggae.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -428,7 +428,7 @@ genre  : 16 (Reggae)
 
 Test case 32
 Generated test file "id3v1_032_genre.mp3"
-An ID3 tag with genre set to Rock.                                    
+An ID3 tag with genre set to Rock.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -441,7 +441,7 @@ genre  : 17 (Rock)
 
 Test case 33
 Generated test file "id3v1_033_genre.mp3"
-An ID3 tag with genre set to Techno.                                  
+An ID3 tag with genre set to Techno.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -454,7 +454,7 @@ genre  : 18 (Techno)
 
 Test case 34
 Generated test file "id3v1_034_genre.mp3"
-An ID3 tag with genre set to Industrial.                              
+An ID3 tag with genre set to Industrial.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -467,7 +467,7 @@ genre  : 19 (Industrial)
 
 Test case 35
 Generated test file "id3v1_035_genre.mp3"
-An ID3 tag with genre set to Alternative.                             
+An ID3 tag with genre set to Alternative.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -480,7 +480,7 @@ genre  : 20 (Alternative)
 
 Test case 36
 Generated test file "id3v1_036_genre.mp3"
-An ID3 tag with genre set to Ska.                                     
+An ID3 tag with genre set to Ska.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -493,7 +493,7 @@ genre  : 21 (Ska)
 
 Test case 37
 Generated test file "id3v1_037_genre.mp3"
-An ID3 tag with genre set to Death Metal.                             
+An ID3 tag with genre set to Death Metal.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -506,7 +506,7 @@ genre  : 22 (Death Metal)
 
 Test case 38
 Generated test file "id3v1_038_genre.mp3"
-An ID3 tag with genre set to Pranks.                                  
+An ID3 tag with genre set to Pranks.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -519,7 +519,7 @@ genre  : 23 (Pranks)
 
 Test case 39
 Generated test file "id3v1_039_genre.mp3"
-An ID3 tag with genre set to Soundtrack.                              
+An ID3 tag with genre set to Soundtrack.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -532,7 +532,7 @@ genre  : 24 (Soundtrack)
 
 Test case 40
 Generated test file "id3v1_040_genre.mp3"
-An ID3 tag with genre set to Euro-Techno.                             
+An ID3 tag with genre set to Euro-Techno.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -545,7 +545,7 @@ genre  : 25 (Euro-Techno)
 
 Test case 41
 Generated test file "id3v1_041_genre.mp3"
-An ID3 tag with genre set to Ambient.                                 
+An ID3 tag with genre set to Ambient.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -558,7 +558,7 @@ genre  : 26 (Ambient)
 
 Test case 42
 Generated test file "id3v1_042_genre.mp3"
-An ID3 tag with genre set to Trip-Hop.                                
+An ID3 tag with genre set to Trip-Hop.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -571,7 +571,7 @@ genre  : 27 (Trip-Hop)
 
 Test case 43
 Generated test file "id3v1_043_genre.mp3"
-An ID3 tag with genre set to Vocal.                                   
+An ID3 tag with genre set to Vocal.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -584,7 +584,7 @@ genre  : 28 (Vocal)
 
 Test case 44
 Generated test file "id3v1_044_genre.mp3"
-An ID3 tag with genre set to Jazz+Funk.                               
+An ID3 tag with genre set to Jazz+Funk.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -597,7 +597,7 @@ genre  : 29 (Jazz+Funk)
 
 Test case 45
 Generated test file "id3v1_045_genre.mp3"
-An ID3 tag with genre set to Fusion.                                  
+An ID3 tag with genre set to Fusion.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -610,7 +610,7 @@ genre  : 30 (Fusion)
 
 Test case 46
 Generated test file "id3v1_046_genre.mp3"
-An ID3 tag with genre set to Trance.                                  
+An ID3 tag with genre set to Trance.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -623,7 +623,7 @@ genre  : 31 (Trance)
 
 Test case 47
 Generated test file "id3v1_047_genre.mp3"
-An ID3 tag with genre set to Classical.                               
+An ID3 tag with genre set to Classical.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -636,7 +636,7 @@ genre  : 32 (Classical)
 
 Test case 48
 Generated test file "id3v1_048_genre.mp3"
-An ID3 tag with genre set to Instrumental.                            
+An ID3 tag with genre set to Instrumental.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -649,7 +649,7 @@ genre  : 33 (Instrumental)
 
 Test case 49
 Generated test file "id3v1_049_genre.mp3"
-An ID3 tag with genre set to Acid.                                    
+An ID3 tag with genre set to Acid.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -662,7 +662,7 @@ genre  : 34 (Acid)
 
 Test case 50
 Generated test file "id3v1_050_genre.mp3"
-An ID3 tag with genre set to House.                                   
+An ID3 tag with genre set to House.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -675,7 +675,7 @@ genre  : 35 (House)
 
 Test case 51
 Generated test file "id3v1_051_genre.mp3"
-An ID3 tag with genre set to Game.                                    
+An ID3 tag with genre set to Game.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -688,7 +688,7 @@ genre  : 36 (Game)
 
 Test case 52
 Generated test file "id3v1_052_genre.mp3"
-An ID3 tag with genre set to Sound Clip.                              
+An ID3 tag with genre set to Sound Clip.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -701,7 +701,7 @@ genre  : 37 (Sound Clip)
 
 Test case 53
 Generated test file "id3v1_053_genre.mp3"
-An ID3 tag with genre set to Gospel.                                  
+An ID3 tag with genre set to Gospel.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -714,7 +714,7 @@ genre  : 38 (Gospel)
 
 Test case 54
 Generated test file "id3v1_054_genre.mp3"
-An ID3 tag with genre set to Noise.                                   
+An ID3 tag with genre set to Noise.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -727,7 +727,7 @@ genre  : 39 (Noise)
 
 Test case 55
 Generated test file "id3v1_055_genre.mp3"
-An ID3 tag with genre set to AlternRock.                              
+An ID3 tag with genre set to AlternRock.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -740,7 +740,7 @@ genre  : 40 (AlternRock)
 
 Test case 56
 Generated test file "id3v1_056_genre.mp3"
-An ID3 tag with genre set to Bass.                                    
+An ID3 tag with genre set to Bass.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -753,7 +753,7 @@ genre  : 41 (Bass)
 
 Test case 57
 Generated test file "id3v1_057_genre.mp3"
-An ID3 tag with genre set to Soul.                                    
+An ID3 tag with genre set to Soul.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -766,7 +766,7 @@ genre  : 42 (Soul)
 
 Test case 58
 Generated test file "id3v1_058_genre.mp3"
-An ID3 tag with genre set to Punk.                                    
+An ID3 tag with genre set to Punk.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -779,7 +779,7 @@ genre  : 43 (Punk)
 
 Test case 59
 Generated test file "id3v1_059_genre.mp3"
-An ID3 tag with genre set to Space.                                   
+An ID3 tag with genre set to Space.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -792,7 +792,7 @@ genre  : 44 (Space)
 
 Test case 60
 Generated test file "id3v1_060_genre.mp3"
-An ID3 tag with genre set to Meditative.                              
+An ID3 tag with genre set to Meditative.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -805,7 +805,7 @@ genre  : 45 (Meditative)
 
 Test case 61
 Generated test file "id3v1_061_genre.mp3"
-An ID3 tag with genre set to Instrumental Pop.                        
+An ID3 tag with genre set to Instrumental Pop.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -818,7 +818,7 @@ genre  : 46 (Instrumental Pop)
 
 Test case 62
 Generated test file "id3v1_062_genre.mp3"
-An ID3 tag with genre set to Instrumental Rock.                       
+An ID3 tag with genre set to Instrumental Rock.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -831,7 +831,7 @@ genre  : 47 (Instrumental Rock)
 
 Test case 63
 Generated test file "id3v1_063_genre.mp3"
-An ID3 tag with genre set to Ethnic.                                  
+An ID3 tag with genre set to Ethnic.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -844,7 +844,7 @@ genre  : 48 (Ethnic)
 
 Test case 64
 Generated test file "id3v1_064_genre.mp3"
-An ID3 tag with genre set to Gothic.                                  
+An ID3 tag with genre set to Gothic.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -857,7 +857,7 @@ genre  : 49 (Gothic)
 
 Test case 65
 Generated test file "id3v1_065_genre.mp3"
-An ID3 tag with genre set to Darkwave.                                
+An ID3 tag with genre set to Darkwave.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -870,7 +870,7 @@ genre  : 50 (Darkwave)
 
 Test case 66
 Generated test file "id3v1_066_genre.mp3"
-An ID3 tag with genre set to Techno-Industrial.                       
+An ID3 tag with genre set to Techno-Industrial.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -883,7 +883,7 @@ genre  : 51 (Techno-Industrial)
 
 Test case 67
 Generated test file "id3v1_067_genre.mp3"
-An ID3 tag with genre set to Electronic.                              
+An ID3 tag with genre set to Electronic.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -896,7 +896,7 @@ genre  : 52 (Electronic)
 
 Test case 68
 Generated test file "id3v1_068_genre.mp3"
-An ID3 tag with genre set to Pop-Folk.                                
+An ID3 tag with genre set to Pop-Folk.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -909,7 +909,7 @@ genre  : 53 (Pop-Folk)
 
 Test case 69
 Generated test file "id3v1_069_genre.mp3"
-An ID3 tag with genre set to Eurodance.                               
+An ID3 tag with genre set to Eurodance.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -922,7 +922,7 @@ genre  : 54 (Eurodance)
 
 Test case 70
 Generated test file "id3v1_070_genre.mp3"
-An ID3 tag with genre set to Dream.                                   
+An ID3 tag with genre set to Dream.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -935,7 +935,7 @@ genre  : 55 (Dream)
 
 Test case 71
 Generated test file "id3v1_071_genre.mp3"
-An ID3 tag with genre set to Southern Rock.                           
+An ID3 tag with genre set to Southern Rock.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -948,7 +948,7 @@ genre  : 56 (Southern Rock)
 
 Test case 72
 Generated test file "id3v1_072_genre.mp3"
-An ID3 tag with genre set to Comedy.                                  
+An ID3 tag with genre set to Comedy.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -961,7 +961,7 @@ genre  : 57 (Comedy)
 
 Test case 73
 Generated test file "id3v1_073_genre.mp3"
-An ID3 tag with genre set to Cult.                                    
+An ID3 tag with genre set to Cult.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -974,7 +974,7 @@ genre  : 58 (Cult)
 
 Test case 74
 Generated test file "id3v1_074_genre.mp3"
-An ID3 tag with genre set to Gangsta.                                 
+An ID3 tag with genre set to Gangsta.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -987,7 +987,7 @@ genre  : 59 (Gangsta)
 
 Test case 75
 Generated test file "id3v1_075_genre.mp3"
-An ID3 tag with genre set to Top 40.                                  
+An ID3 tag with genre set to Top 40.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1000,7 +1000,7 @@ genre  : 60 (Top 40)
 
 Test case 76
 Generated test file "id3v1_076_genre.mp3"
-An ID3 tag with genre set to Christian Rap.                           
+An ID3 tag with genre set to Christian Rap.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1013,7 +1013,7 @@ genre  : 61 (Christian Rap)
 
 Test case 77
 Generated test file "id3v1_077_genre.mp3"
-An ID3 tag with genre set to Pop/Funk.                                
+An ID3 tag with genre set to Pop/Funk.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1026,7 +1026,7 @@ genre  : 62 (Pop/Funk)
 
 Test case 78
 Generated test file "id3v1_078_genre.mp3"
-An ID3 tag with genre set to Jungle.                                  
+An ID3 tag with genre set to Jungle.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1039,7 +1039,7 @@ genre  : 63 (Jungle)
 
 Test case 79
 Generated test file "id3v1_079_genre.mp3"
-An ID3 tag with genre set to Native American.                         
+An ID3 tag with genre set to Native American.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1052,7 +1052,7 @@ genre  : 64 (Native American)
 
 Test case 80
 Generated test file "id3v1_080_genre.mp3"
-An ID3 tag with genre set to Cabaret.                                 
+An ID3 tag with genre set to Cabaret.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1065,7 +1065,7 @@ genre  : 65 (Cabaret)
 
 Test case 81
 Generated test file "id3v1_081_genre.mp3"
-An ID3 tag with genre set to New Wave.                                
+An ID3 tag with genre set to New Wave.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1078,7 +1078,7 @@ genre  : 66 (New Wave)
 
 Test case 82
 Generated test file "id3v1_082_genre.mp3"
-An ID3 tag with genre set to Psychadelic.                             
+An ID3 tag with genre set to Psychadelic.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1091,7 +1091,7 @@ genre  : 67 (Psychadelic)
 
 Test case 83
 Generated test file "id3v1_083_genre.mp3"
-An ID3 tag with genre set to Rave.                                    
+An ID3 tag with genre set to Rave.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1104,7 +1104,7 @@ genre  : 68 (Rave)
 
 Test case 84
 Generated test file "id3v1_084_genre.mp3"
-An ID3 tag with genre set to Showtunes.                               
+An ID3 tag with genre set to Showtunes.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1117,7 +1117,7 @@ genre  : 69 (Showtunes)
 
 Test case 85
 Generated test file "id3v1_085_genre.mp3"
-An ID3 tag with genre set to Trailer.                                 
+An ID3 tag with genre set to Trailer.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1130,7 +1130,7 @@ genre  : 70 (Trailer)
 
 Test case 86
 Generated test file "id3v1_086_genre.mp3"
-An ID3 tag with genre set to Lo-Fi.                                   
+An ID3 tag with genre set to Lo-Fi.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1143,7 +1143,7 @@ genre  : 71 (Lo-Fi)
 
 Test case 87
 Generated test file "id3v1_087_genre.mp3"
-An ID3 tag with genre set to Tribal.                                  
+An ID3 tag with genre set to Tribal.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1156,7 +1156,7 @@ genre  : 72 (Tribal)
 
 Test case 88
 Generated test file "id3v1_088_genre.mp3"
-An ID3 tag with genre set to Acid Punk.                               
+An ID3 tag with genre set to Acid Punk.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1169,7 +1169,7 @@ genre  : 73 (Acid Punk)
 
 Test case 89
 Generated test file "id3v1_089_genre.mp3"
-An ID3 tag with genre set to Acid Jazz.                               
+An ID3 tag with genre set to Acid Jazz.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1182,7 +1182,7 @@ genre  : 74 (Acid Jazz)
 
 Test case 90
 Generated test file "id3v1_090_genre.mp3"
-An ID3 tag with genre set to Polka.                                   
+An ID3 tag with genre set to Polka.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1195,7 +1195,7 @@ genre  : 75 (Polka)
 
 Test case 91
 Generated test file "id3v1_091_genre.mp3"
-An ID3 tag with genre set to Retro.                                   
+An ID3 tag with genre set to Retro.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1208,7 +1208,7 @@ genre  : 76 (Retro)
 
 Test case 92
 Generated test file "id3v1_092_genre.mp3"
-An ID3 tag with genre set to Musical.                                 
+An ID3 tag with genre set to Musical.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1221,7 +1221,7 @@ genre  : 77 (Musical)
 
 Test case 93
 Generated test file "id3v1_093_genre.mp3"
-An ID3 tag with genre set to Rock & Roll.                             
+An ID3 tag with genre set to Rock & Roll.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1234,7 +1234,7 @@ genre  : 78 (Rock & Roll)
 
 Test case 94
 Generated test file "id3v1_094_genre.mp3"
-An ID3 tag with genre set to Hard Rock.                               
+An ID3 tag with genre set to Hard Rock.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -1247,8 +1247,8 @@ genre  : 79 (Hard Rock)
 
 Test case 95
 Generated test file "id3v1_095_genre_W.mp3"
-An ID3 tag with genre set to Folk. Only the first 80 genres are       
-defined in the original ID3.                                          
+An ID3 tag with genre set to Folk. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1262,8 +1262,8 @@ genre  : 80 (Folk)
 
 Test case 96
 Generated test file "id3v1_096_genre_W.mp3"
-An ID3 tag with genre set to Folk-Rock. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Folk-Rock. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1277,8 +1277,8 @@ genre  : 81 (Folk-Rock)
 
 Test case 97
 Generated test file "id3v1_097_genre_W.mp3"
-An ID3 tag with genre set to National Folk. Only the first 80 genres  
-are defined in the original ID3.                                      
+An ID3 tag with genre set to National Folk. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1292,8 +1292,8 @@ genre  : 82 (National Folk)
 
 Test case 98
 Generated test file "id3v1_098_genre_W.mp3"
-An ID3 tag with genre set to Swing. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Swing. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1308,7 +1308,7 @@ genre  : 83 (Swing)
 Test case 99
 Generated test file "id3v1_099_genre_W.mp3"
 An ID3 tag with genre set to Fast Fusion. Only the first 80 genres are
-defined in the original ID3.                                          
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1322,8 +1322,8 @@ genre  : 84 (Fast Fusion)
 
 Test case 100
 Generated test file "id3v1_100_genre_W.mp3"
-An ID3 tag with genre set to Bebob. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Bebob. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1337,8 +1337,8 @@ genre  : 85 (Bebob)
 
 Test case 101
 Generated test file "id3v1_101_genre_W.mp3"
-An ID3 tag with genre set to Latin. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Latin. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1352,8 +1352,8 @@ genre  : 86 (Latin)
 
 Test case 102
 Generated test file "id3v1_102_genre_W.mp3"
-An ID3 tag with genre set to Revival. Only the first 80 genres are    
-defined in the original ID3.                                          
+An ID3 tag with genre set to Revival. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1367,8 +1367,8 @@ genre  : 87 (Revival)
 
 Test case 103
 Generated test file "id3v1_103_genre_W.mp3"
-An ID3 tag with genre set to Celtic. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Celtic. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1382,8 +1382,8 @@ genre  : 88 (Celtic)
 
 Test case 104
 Generated test file "id3v1_104_genre_W.mp3"
-An ID3 tag with genre set to Bluegrass. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Bluegrass. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1397,8 +1397,8 @@ genre  : 89 (Bluegrass)
 
 Test case 105
 Generated test file "id3v1_105_genre_W.mp3"
-An ID3 tag with genre set to Avantgarde. Only the first 80 genres are 
-defined in the original ID3.                                          
+An ID3 tag with genre set to Avantgarde. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1413,7 +1413,7 @@ genre  : 90 (Avantgarde)
 Test case 106
 Generated test file "id3v1_106_genre_W.mp3"
 An ID3 tag with genre set to Gothic Rock. Only the first 80 genres are
-defined in the original ID3.                                          
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1427,8 +1427,8 @@ genre  : 91 (Gothic Rock)
 
 Test case 107
 Generated test file "id3v1_107_genre_W.mp3"
-An ID3 tag with genre set to Progressive Rock. Only the first 80      
-genres are defined in the original ID3.                               
+An ID3 tag with genre set to Progressive Rock. Only the first 80
+genres are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1442,8 +1442,8 @@ genre  : 92 (Progressive Rock)
 
 Test case 108
 Generated test file "id3v1_108_genre_W.mp3"
-An ID3 tag with genre set to Psychedelic Rock. Only the first 80      
-genres are defined in the original ID3.                               
+An ID3 tag with genre set to Psychedelic Rock. Only the first 80
+genres are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1457,8 +1457,8 @@ genre  : 93 (Psychedelic Rock)
 
 Test case 109
 Generated test file "id3v1_109_genre_W.mp3"
-An ID3 tag with genre set to Symphonic Rock. Only the first 80 genres 
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Symphonic Rock. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1472,8 +1472,8 @@ genre  : 94 (Symphonic Rock)
 
 Test case 110
 Generated test file "id3v1_110_genre_W.mp3"
-An ID3 tag with genre set to Slow Rock. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Slow Rock. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1487,8 +1487,8 @@ genre  : 95 (Slow Rock)
 
 Test case 111
 Generated test file "id3v1_111_genre_W.mp3"
-An ID3 tag with genre set to Big Band. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Big Band. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1502,8 +1502,8 @@ genre  : 96 (Big Band)
 
 Test case 112
 Generated test file "id3v1_112_genre_W.mp3"
-An ID3 tag with genre set to Chorus. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Chorus. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1517,8 +1517,8 @@ genre  : 97 (Chorus)
 
 Test case 113
 Generated test file "id3v1_113_genre_W.mp3"
-An ID3 tag with genre set to Easy Listening. Only the first 80 genres 
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Easy Listening. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1532,8 +1532,8 @@ genre  : 98 (Easy Listening)
 
 Test case 114
 Generated test file "id3v1_114_genre_W.mp3"
-An ID3 tag with genre set to Acoustic. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Acoustic. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1547,8 +1547,8 @@ genre  : 99 (Acoustic)
 
 Test case 115
 Generated test file "id3v1_115_genre_W.mp3"
-An ID3 tag with genre set to Humour. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Humour. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1562,8 +1562,8 @@ genre  : 100 (Humour)
 
 Test case 116
 Generated test file "id3v1_116_genre_W.mp3"
-An ID3 tag with genre set to Speech. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Speech. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1577,8 +1577,8 @@ genre  : 101 (Speech)
 
 Test case 117
 Generated test file "id3v1_117_genre_W.mp3"
-An ID3 tag with genre set to Chanson. Only the first 80 genres are    
-defined in the original ID3.                                          
+An ID3 tag with genre set to Chanson. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1592,8 +1592,8 @@ genre  : 102 (Chanson)
 
 Test case 118
 Generated test file "id3v1_118_genre_W.mp3"
-An ID3 tag with genre set to Opera. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Opera. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1607,8 +1607,8 @@ genre  : 103 (Opera)
 
 Test case 119
 Generated test file "id3v1_119_genre_W.mp3"
-An ID3 tag with genre set to Chamber Music. Only the first 80 genres  
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Chamber Music. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1622,8 +1622,8 @@ genre  : 104 (Chamber Music)
 
 Test case 120
 Generated test file "id3v1_120_genre_W.mp3"
-An ID3 tag with genre set to Sonata. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Sonata. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1637,8 +1637,8 @@ genre  : 105 (Sonata)
 
 Test case 121
 Generated test file "id3v1_121_genre_W.mp3"
-An ID3 tag with genre set to Symphony. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Symphony. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1652,8 +1652,8 @@ genre  : 106 (Symphony)
 
 Test case 122
 Generated test file "id3v1_122_genre_W.mp3"
-An ID3 tag with genre set to Booty Bass. Only the first 80 genres are 
-defined in the original ID3.                                          
+An ID3 tag with genre set to Booty Bass. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1667,8 +1667,8 @@ genre  : 107 (Booty Bass)
 
 Test case 123
 Generated test file "id3v1_123_genre_W.mp3"
-An ID3 tag with genre set to Primus. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Primus. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1683,7 +1683,7 @@ genre  : 108 (Primus)
 Test case 124
 Generated test file "id3v1_124_genre_W.mp3"
 An ID3 tag with genre set to Porn Groove. Only the first 80 genres are
-defined in the original ID3.                                          
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1697,8 +1697,8 @@ genre  : 109 (Porn Groove)
 
 Test case 125
 Generated test file "id3v1_125_genre_W.mp3"
-An ID3 tag with genre set to Satire. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Satire. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1712,8 +1712,8 @@ genre  : 110 (Satire)
 
 Test case 126
 Generated test file "id3v1_126_genre_W.mp3"
-An ID3 tag with genre set to Slow Jam. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Slow Jam. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1727,8 +1727,8 @@ genre  : 111 (Slow Jam)
 
 Test case 127
 Generated test file "id3v1_127_genre_W.mp3"
-An ID3 tag with genre set to Club. Only the first 80 genres are       
-defined in the original ID3.                                          
+An ID3 tag with genre set to Club. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1742,8 +1742,8 @@ genre  : 112 (Club)
 
 Test case 128
 Generated test file "id3v1_128_genre_W.mp3"
-An ID3 tag with genre set to Tango. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Tango. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1757,8 +1757,8 @@ genre  : 113 (Tango)
 
 Test case 129
 Generated test file "id3v1_129_genre_W.mp3"
-An ID3 tag with genre set to Samba. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Samba. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1772,8 +1772,8 @@ genre  : 114 (Samba)
 
 Test case 130
 Generated test file "id3v1_130_genre_W.mp3"
-An ID3 tag with genre set to Folklore. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Folklore. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1787,8 +1787,8 @@ genre  : 115 (Folklore)
 
 Test case 131
 Generated test file "id3v1_131_genre_W.mp3"
-An ID3 tag with genre set to Ballad. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Ballad. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1802,8 +1802,8 @@ genre  : 116 (Ballad)
 
 Test case 132
 Generated test file "id3v1_132_genre_W.mp3"
-An ID3 tag with genre set to Power Ballad. Only the first 80 genres   
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Power Ballad. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1817,8 +1817,8 @@ genre  : 117 (Power Ballad)
 
 Test case 133
 Generated test file "id3v1_133_genre_W.mp3"
-An ID3 tag with genre set to Rhythmic Soul. Only the first 80 genres  
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Rhythmic Soul. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1832,8 +1832,8 @@ genre  : 118 (Rhythmic Soul)
 
 Test case 134
 Generated test file "id3v1_134_genre_W.mp3"
-An ID3 tag with genre set to Freestyle. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Freestyle. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1847,8 +1847,8 @@ genre  : 119 (Freestyle)
 
 Test case 135
 Generated test file "id3v1_135_genre_W.mp3"
-An ID3 tag with genre set to Duet. Only the first 80 genres are       
-defined in the original ID3.                                          
+An ID3 tag with genre set to Duet. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1862,8 +1862,8 @@ genre  : 120 (Duet)
 
 Test case 136
 Generated test file "id3v1_136_genre_W.mp3"
-An ID3 tag with genre set to Punk Rock. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Punk Rock. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1877,8 +1877,8 @@ genre  : 121 (Punk Rock)
 
 Test case 137
 Generated test file "id3v1_137_genre_W.mp3"
-An ID3 tag with genre set to Drum Solo. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Drum Solo. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1892,8 +1892,8 @@ genre  : 122 (Drum Solo)
 
 Test case 138
 Generated test file "id3v1_138_genre_W.mp3"
-An ID3 tag with genre set to A capella. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to A capella. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1907,8 +1907,8 @@ genre  : 123 (A capella)
 
 Test case 139
 Generated test file "id3v1_139_genre_W.mp3"
-An ID3 tag with genre set to Euro-House. Only the first 80 genres are 
-defined in the original ID3.                                          
+An ID3 tag with genre set to Euro-House. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1922,8 +1922,8 @@ genre  : 124 (Euro-House)
 
 Test case 140
 Generated test file "id3v1_140_genre_W.mp3"
-An ID3 tag with genre set to Dance Hall. Only the first 80 genres are 
-defined in the original ID3.                                          
+An ID3 tag with genre set to Dance Hall. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1938,7 +1938,7 @@ genre  : 125 (Dance Hall)
 Test case 141
 Generated test file "id3v1_141_genre_W.mp3"
 An ID3 tag with genre set to Goa. Only the first 80 genres are defined
-in the original ID3.                                                  
+in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1953,7 +1953,7 @@ genre  : 126 (Goa)
 Test case 142
 Generated test file "id3v1_142_genre_W.mp3"
 An ID3 tag with genre set to Drum & Bass. Only the first 80 genres are
-defined in the original ID3.                                          
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1967,8 +1967,8 @@ genre  : 127 (Drum & Bass)
 
 Test case 143
 Generated test file "id3v1_143_genre_W.mp3"
-An ID3 tag with genre set to Club-House. Only the first 80 genres are 
-defined in the original ID3.                                          
+An ID3 tag with genre set to Club-House. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1982,8 +1982,8 @@ genre  : 128 (Club-House)
 
 Test case 144
 Generated test file "id3v1_144_genre_W.mp3"
-An ID3 tag with genre set to Hardcore. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Hardcore. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -1997,8 +1997,8 @@ genre  : 129 (Hardcore)
 
 Test case 145
 Generated test file "id3v1_145_genre_W.mp3"
-An ID3 tag with genre set to Terror. Only the first 80 genres are     
-defined in the original ID3.                                          
+An ID3 tag with genre set to Terror. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2012,8 +2012,8 @@ genre  : 130 (Terror)
 
 Test case 146
 Generated test file "id3v1_146_genre_W.mp3"
-An ID3 tag with genre set to Indie. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Indie. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2027,8 +2027,8 @@ genre  : 131 (Indie)
 
 Test case 147
 Generated test file "id3v1_147_genre_W.mp3"
-An ID3 tag with genre set to BritPop. Only the first 80 genres are    
-defined in the original ID3.                                          
+An ID3 tag with genre set to BritPop. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2042,8 +2042,8 @@ genre  : 132 (BritPop)
 
 Test case 148
 Generated test file "id3v1_148_genre_W.mp3"
-An ID3 tag with genre set to Negerpunk. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Negerpunk. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2057,8 +2057,8 @@ genre  : 133 (Negerpunk)
 
 Test case 149
 Generated test file "id3v1_149_genre_W.mp3"
-An ID3 tag with genre set to Polsk Punk. Only the first 80 genres are 
-defined in the original ID3.                                          
+An ID3 tag with genre set to Polsk Punk. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2072,8 +2072,8 @@ genre  : 134 (Polsk Punk)
 
 Test case 150
 Generated test file "id3v1_150_genre_W.mp3"
-An ID3 tag with genre set to Beat. Only the first 80 genres are       
-defined in the original ID3.                                          
+An ID3 tag with genre set to Beat. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2087,8 +2087,8 @@ genre  : 135 (Beat)
 
 Test case 151
 Generated test file "id3v1_151_genre_W.mp3"
-An ID3 tag with genre set to Christian. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Christian. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2103,7 +2103,7 @@ genre  : 136 (Christian)
 Test case 152
 Generated test file "id3v1_152_genre_W.mp3"
 An ID3 tag with genre set to Heavy Metal. Only the first 80 genres are
-defined in the original ID3.                                          
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2118,7 +2118,7 @@ genre  : 137 (Heavy Metal)
 Test case 153
 Generated test file "id3v1_153_genre_W.mp3"
 An ID3 tag with genre set to Black Metal. Only the first 80 genres are
-defined in the original ID3.                                          
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2132,8 +2132,8 @@ genre  : 138 (Black Metal)
 
 Test case 154
 Generated test file "id3v1_154_genre_W.mp3"
-An ID3 tag with genre set to Crossover. Only the first 80 genres are  
-defined in the original ID3.                                          
+An ID3 tag with genre set to Crossover. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2147,8 +2147,8 @@ genre  : 139 (Crossover)
 
 Test case 155
 Generated test file "id3v1_155_genre_W.mp3"
-An ID3 tag with genre set to Contemporary. Only the first 80 genres   
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Contemporary. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2162,8 +2162,8 @@ genre  : 140 (Contemporary)
 
 Test case 156
 Generated test file "id3v1_156_genre_W.mp3"
-An ID3 tag with genre set to Christian Rock. Only the first 80 genres 
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Christian Rock. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2177,8 +2177,8 @@ genre  : 141 (Christian Rock)
 
 Test case 157
 Generated test file "id3v1_157_genre_W.mp3"
-An ID3 tag with genre set to Merengue. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Merengue. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2192,8 +2192,8 @@ genre  : 142 (Merengue)
 
 Test case 158
 Generated test file "id3v1_158_genre_W.mp3"
-An ID3 tag with genre set to Salsa. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Salsa. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2207,8 +2207,8 @@ genre  : 143 (Salsa)
 
 Test case 159
 Generated test file "id3v1_159_genre_W.mp3"
-An ID3 tag with genre set to Thrash Metal. Only the first 80 genres   
-are defined in the original ID3.                                      
+An ID3 tag with genre set to Thrash Metal. Only the first 80 genres
+are defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2222,8 +2222,8 @@ genre  : 144 (Thrash Metal)
 
 Test case 160
 Generated test file "id3v1_160_genre_W.mp3"
-An ID3 tag with genre set to Anime. Only the first 80 genres are      
-defined in the original ID3.                                          
+An ID3 tag with genre set to Anime. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2237,8 +2237,8 @@ genre  : 145 (Anime)
 
 Test case 161
 Generated test file "id3v1_161_genre_W.mp3"
-An ID3 tag with genre set to JPop. Only the first 80 genres are       
-defined in the original ID3.                                          
+An ID3 tag with genre set to JPop. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2252,8 +2252,8 @@ genre  : 146 (JPop)
 
 Test case 162
 Generated test file "id3v1_162_genre_W.mp3"
-An ID3 tag with genre set to Synthpop. Only the first 80 genres are   
-defined in the original ID3.                                          
+An ID3 tag with genre set to Synthpop. Only the first 80 genres are
+defined in the original ID3.
 Test case might generate a decoding warning.
 Tag structure
 version: 1.0
@@ -2267,7 +2267,7 @@ genre  : 147 (Synthpop)
 
 Test case 163
 Generated test file "id3v1_163_genre_F.mp3"
-An ID3 tag with genre set to 148.                                     
+An ID3 tag with genre set to 148.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2281,7 +2281,7 @@ genre  : 148 (unknown)
 
 Test case 164
 Generated test file "id3v1_164_genre_F.mp3"
-An ID3 tag with genre set to 149.                                     
+An ID3 tag with genre set to 149.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2295,7 +2295,7 @@ genre  : 149 (unknown)
 
 Test case 165
 Generated test file "id3v1_165_genre_F.mp3"
-An ID3 tag with genre set to 150.                                     
+An ID3 tag with genre set to 150.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2309,7 +2309,7 @@ genre  : 150 (unknown)
 
 Test case 166
 Generated test file "id3v1_166_genre_F.mp3"
-An ID3 tag with genre set to 151.                                     
+An ID3 tag with genre set to 151.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2323,7 +2323,7 @@ genre  : 151 (unknown)
 
 Test case 167
 Generated test file "id3v1_167_genre_F.mp3"
-An ID3 tag with genre set to 152.                                     
+An ID3 tag with genre set to 152.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2337,7 +2337,7 @@ genre  : 152 (unknown)
 
 Test case 168
 Generated test file "id3v1_168_genre_F.mp3"
-An ID3 tag with genre set to 153.                                     
+An ID3 tag with genre set to 153.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2351,7 +2351,7 @@ genre  : 153 (unknown)
 
 Test case 169
 Generated test file "id3v1_169_genre_F.mp3"
-An ID3 tag with genre set to 154.                                     
+An ID3 tag with genre set to 154.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2365,7 +2365,7 @@ genre  : 154 (unknown)
 
 Test case 170
 Generated test file "id3v1_170_genre_F.mp3"
-An ID3 tag with genre set to 155.                                     
+An ID3 tag with genre set to 155.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2379,7 +2379,7 @@ genre  : 155 (unknown)
 
 Test case 171
 Generated test file "id3v1_171_genre_F.mp3"
-An ID3 tag with genre set to 156.                                     
+An ID3 tag with genre set to 156.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2393,7 +2393,7 @@ genre  : 156 (unknown)
 
 Test case 172
 Generated test file "id3v1_172_genre_F.mp3"
-An ID3 tag with genre set to 157.                                     
+An ID3 tag with genre set to 157.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2407,7 +2407,7 @@ genre  : 157 (unknown)
 
 Test case 173
 Generated test file "id3v1_173_genre_F.mp3"
-An ID3 tag with genre set to 158.                                     
+An ID3 tag with genre set to 158.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2421,7 +2421,7 @@ genre  : 158 (unknown)
 
 Test case 174
 Generated test file "id3v1_174_genre_F.mp3"
-An ID3 tag with genre set to 159.                                     
+An ID3 tag with genre set to 159.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2435,7 +2435,7 @@ genre  : 159 (unknown)
 
 Test case 175
 Generated test file "id3v1_175_genre_F.mp3"
-An ID3 tag with genre set to 160.                                     
+An ID3 tag with genre set to 160.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2449,7 +2449,7 @@ genre  : 160 (unknown)
 
 Test case 176
 Generated test file "id3v1_176_genre_F.mp3"
-An ID3 tag with genre set to 161.                                     
+An ID3 tag with genre set to 161.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2463,7 +2463,7 @@ genre  : 161 (unknown)
 
 Test case 177
 Generated test file "id3v1_177_genre_F.mp3"
-An ID3 tag with genre set to 162.                                     
+An ID3 tag with genre set to 162.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2477,7 +2477,7 @@ genre  : 162 (unknown)
 
 Test case 178
 Generated test file "id3v1_178_genre_F.mp3"
-An ID3 tag with genre set to 163.                                     
+An ID3 tag with genre set to 163.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2491,7 +2491,7 @@ genre  : 163 (unknown)
 
 Test case 179
 Generated test file "id3v1_179_genre_F.mp3"
-An ID3 tag with genre set to 164.                                     
+An ID3 tag with genre set to 164.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2505,7 +2505,7 @@ genre  : 164 (unknown)
 
 Test case 180
 Generated test file "id3v1_180_genre_F.mp3"
-An ID3 tag with genre set to 165.                                     
+An ID3 tag with genre set to 165.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2519,7 +2519,7 @@ genre  : 165 (unknown)
 
 Test case 181
 Generated test file "id3v1_181_genre_F.mp3"
-An ID3 tag with genre set to 166.                                     
+An ID3 tag with genre set to 166.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2533,7 +2533,7 @@ genre  : 166 (unknown)
 
 Test case 182
 Generated test file "id3v1_182_genre_F.mp3"
-An ID3 tag with genre set to 167.                                     
+An ID3 tag with genre set to 167.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2547,7 +2547,7 @@ genre  : 167 (unknown)
 
 Test case 183
 Generated test file "id3v1_183_genre_F.mp3"
-An ID3 tag with genre set to 168.                                     
+An ID3 tag with genre set to 168.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2561,7 +2561,7 @@ genre  : 168 (unknown)
 
 Test case 184
 Generated test file "id3v1_184_genre_F.mp3"
-An ID3 tag with genre set to 169.                                     
+An ID3 tag with genre set to 169.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2575,7 +2575,7 @@ genre  : 169 (unknown)
 
 Test case 185
 Generated test file "id3v1_185_genre_F.mp3"
-An ID3 tag with genre set to 170.                                     
+An ID3 tag with genre set to 170.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2589,7 +2589,7 @@ genre  : 170 (unknown)
 
 Test case 186
 Generated test file "id3v1_186_genre_F.mp3"
-An ID3 tag with genre set to 171.                                     
+An ID3 tag with genre set to 171.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2603,7 +2603,7 @@ genre  : 171 (unknown)
 
 Test case 187
 Generated test file "id3v1_187_genre_F.mp3"
-An ID3 tag with genre set to 172.                                     
+An ID3 tag with genre set to 172.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2617,7 +2617,7 @@ genre  : 172 (unknown)
 
 Test case 188
 Generated test file "id3v1_188_genre_F.mp3"
-An ID3 tag with genre set to 173.                                     
+An ID3 tag with genre set to 173.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2631,7 +2631,7 @@ genre  : 173 (unknown)
 
 Test case 189
 Generated test file "id3v1_189_genre_F.mp3"
-An ID3 tag with genre set to 174.                                     
+An ID3 tag with genre set to 174.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2645,7 +2645,7 @@ genre  : 174 (unknown)
 
 Test case 190
 Generated test file "id3v1_190_genre_F.mp3"
-An ID3 tag with genre set to 175.                                     
+An ID3 tag with genre set to 175.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2659,7 +2659,7 @@ genre  : 175 (unknown)
 
 Test case 191
 Generated test file "id3v1_191_genre_F.mp3"
-An ID3 tag with genre set to 176.                                     
+An ID3 tag with genre set to 176.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2673,7 +2673,7 @@ genre  : 176 (unknown)
 
 Test case 192
 Generated test file "id3v1_192_genre_F.mp3"
-An ID3 tag with genre set to 177.                                     
+An ID3 tag with genre set to 177.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2687,7 +2687,7 @@ genre  : 177 (unknown)
 
 Test case 193
 Generated test file "id3v1_193_genre_F.mp3"
-An ID3 tag with genre set to 178.                                     
+An ID3 tag with genre set to 178.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2701,7 +2701,7 @@ genre  : 178 (unknown)
 
 Test case 194
 Generated test file "id3v1_194_genre_F.mp3"
-An ID3 tag with genre set to 179.                                     
+An ID3 tag with genre set to 179.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2715,7 +2715,7 @@ genre  : 179 (unknown)
 
 Test case 195
 Generated test file "id3v1_195_genre_F.mp3"
-An ID3 tag with genre set to 180.                                     
+An ID3 tag with genre set to 180.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2729,7 +2729,7 @@ genre  : 180 (unknown)
 
 Test case 196
 Generated test file "id3v1_196_genre_F.mp3"
-An ID3 tag with genre set to 181.                                     
+An ID3 tag with genre set to 181.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2743,7 +2743,7 @@ genre  : 181 (unknown)
 
 Test case 197
 Generated test file "id3v1_197_genre_F.mp3"
-An ID3 tag with genre set to 182.                                     
+An ID3 tag with genre set to 182.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2757,7 +2757,7 @@ genre  : 182 (unknown)
 
 Test case 198
 Generated test file "id3v1_198_genre_F.mp3"
-An ID3 tag with genre set to 183.                                     
+An ID3 tag with genre set to 183.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2771,7 +2771,7 @@ genre  : 183 (unknown)
 
 Test case 199
 Generated test file "id3v1_199_genre_F.mp3"
-An ID3 tag with genre set to 184.                                     
+An ID3 tag with genre set to 184.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2785,7 +2785,7 @@ genre  : 184 (unknown)
 
 Test case 200
 Generated test file "id3v1_200_genre_F.mp3"
-An ID3 tag with genre set to 185.                                     
+An ID3 tag with genre set to 185.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2799,7 +2799,7 @@ genre  : 185 (unknown)
 
 Test case 201
 Generated test file "id3v1_201_genre_F.mp3"
-An ID3 tag with genre set to 186.                                     
+An ID3 tag with genre set to 186.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2813,7 +2813,7 @@ genre  : 186 (unknown)
 
 Test case 202
 Generated test file "id3v1_202_genre_F.mp3"
-An ID3 tag with genre set to 187.                                     
+An ID3 tag with genre set to 187.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2827,7 +2827,7 @@ genre  : 187 (unknown)
 
 Test case 203
 Generated test file "id3v1_203_genre_F.mp3"
-An ID3 tag with genre set to 188.                                     
+An ID3 tag with genre set to 188.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2841,7 +2841,7 @@ genre  : 188 (unknown)
 
 Test case 204
 Generated test file "id3v1_204_genre_F.mp3"
-An ID3 tag with genre set to 189.                                     
+An ID3 tag with genre set to 189.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2855,7 +2855,7 @@ genre  : 189 (unknown)
 
 Test case 205
 Generated test file "id3v1_205_genre_F.mp3"
-An ID3 tag with genre set to 190.                                     
+An ID3 tag with genre set to 190.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2869,7 +2869,7 @@ genre  : 190 (unknown)
 
 Test case 206
 Generated test file "id3v1_206_genre_F.mp3"
-An ID3 tag with genre set to 191.                                     
+An ID3 tag with genre set to 191.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2883,7 +2883,7 @@ genre  : 191 (unknown)
 
 Test case 207
 Generated test file "id3v1_207_genre_F.mp3"
-An ID3 tag with genre set to 192.                                     
+An ID3 tag with genre set to 192.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2897,7 +2897,7 @@ genre  : 192 (unknown)
 
 Test case 208
 Generated test file "id3v1_208_genre_F.mp3"
-An ID3 tag with genre set to 193.                                     
+An ID3 tag with genre set to 193.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2911,7 +2911,7 @@ genre  : 193 (unknown)
 
 Test case 209
 Generated test file "id3v1_209_genre_F.mp3"
-An ID3 tag with genre set to 194.                                     
+An ID3 tag with genre set to 194.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2925,7 +2925,7 @@ genre  : 194 (unknown)
 
 Test case 210
 Generated test file "id3v1_210_genre_F.mp3"
-An ID3 tag with genre set to 195.                                     
+An ID3 tag with genre set to 195.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2939,7 +2939,7 @@ genre  : 195 (unknown)
 
 Test case 211
 Generated test file "id3v1_211_genre_F.mp3"
-An ID3 tag with genre set to 196.                                     
+An ID3 tag with genre set to 196.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2953,7 +2953,7 @@ genre  : 196 (unknown)
 
 Test case 212
 Generated test file "id3v1_212_genre_F.mp3"
-An ID3 tag with genre set to 197.                                     
+An ID3 tag with genre set to 197.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2967,7 +2967,7 @@ genre  : 197 (unknown)
 
 Test case 213
 Generated test file "id3v1_213_genre_F.mp3"
-An ID3 tag with genre set to 198.                                     
+An ID3 tag with genre set to 198.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2981,7 +2981,7 @@ genre  : 198 (unknown)
 
 Test case 214
 Generated test file "id3v1_214_genre_F.mp3"
-An ID3 tag with genre set to 199.                                     
+An ID3 tag with genre set to 199.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -2995,7 +2995,7 @@ genre  : 199 (unknown)
 
 Test case 215
 Generated test file "id3v1_215_genre_F.mp3"
-An ID3 tag with genre set to 200.                                     
+An ID3 tag with genre set to 200.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3009,7 +3009,7 @@ genre  : 200 (unknown)
 
 Test case 216
 Generated test file "id3v1_216_genre_F.mp3"
-An ID3 tag with genre set to 201.                                     
+An ID3 tag with genre set to 201.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3023,7 +3023,7 @@ genre  : 201 (unknown)
 
 Test case 217
 Generated test file "id3v1_217_genre_F.mp3"
-An ID3 tag with genre set to 202.                                     
+An ID3 tag with genre set to 202.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3037,7 +3037,7 @@ genre  : 202 (unknown)
 
 Test case 218
 Generated test file "id3v1_218_genre_F.mp3"
-An ID3 tag with genre set to 203.                                     
+An ID3 tag with genre set to 203.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3051,7 +3051,7 @@ genre  : 203 (unknown)
 
 Test case 219
 Generated test file "id3v1_219_genre_F.mp3"
-An ID3 tag with genre set to 204.                                     
+An ID3 tag with genre set to 204.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3065,7 +3065,7 @@ genre  : 204 (unknown)
 
 Test case 220
 Generated test file "id3v1_220_genre_F.mp3"
-An ID3 tag with genre set to 205.                                     
+An ID3 tag with genre set to 205.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3079,7 +3079,7 @@ genre  : 205 (unknown)
 
 Test case 221
 Generated test file "id3v1_221_genre_F.mp3"
-An ID3 tag with genre set to 206.                                     
+An ID3 tag with genre set to 206.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3093,7 +3093,7 @@ genre  : 206 (unknown)
 
 Test case 222
 Generated test file "id3v1_222_genre_F.mp3"
-An ID3 tag with genre set to 207.                                     
+An ID3 tag with genre set to 207.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3107,7 +3107,7 @@ genre  : 207 (unknown)
 
 Test case 223
 Generated test file "id3v1_223_genre_F.mp3"
-An ID3 tag with genre set to 208.                                     
+An ID3 tag with genre set to 208.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3121,7 +3121,7 @@ genre  : 208 (unknown)
 
 Test case 224
 Generated test file "id3v1_224_genre_F.mp3"
-An ID3 tag with genre set to 209.                                     
+An ID3 tag with genre set to 209.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3135,7 +3135,7 @@ genre  : 209 (unknown)
 
 Test case 225
 Generated test file "id3v1_225_genre_F.mp3"
-An ID3 tag with genre set to 210.                                     
+An ID3 tag with genre set to 210.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3149,7 +3149,7 @@ genre  : 210 (unknown)
 
 Test case 226
 Generated test file "id3v1_226_genre_F.mp3"
-An ID3 tag with genre set to 211.                                     
+An ID3 tag with genre set to 211.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3163,7 +3163,7 @@ genre  : 211 (unknown)
 
 Test case 227
 Generated test file "id3v1_227_genre_F.mp3"
-An ID3 tag with genre set to 212.                                     
+An ID3 tag with genre set to 212.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3177,7 +3177,7 @@ genre  : 212 (unknown)
 
 Test case 228
 Generated test file "id3v1_228_genre_F.mp3"
-An ID3 tag with genre set to 213.                                     
+An ID3 tag with genre set to 213.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3191,7 +3191,7 @@ genre  : 213 (unknown)
 
 Test case 229
 Generated test file "id3v1_229_genre_F.mp3"
-An ID3 tag with genre set to 214.                                     
+An ID3 tag with genre set to 214.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3205,7 +3205,7 @@ genre  : 214 (unknown)
 
 Test case 230
 Generated test file "id3v1_230_genre_F.mp3"
-An ID3 tag with genre set to 215.                                     
+An ID3 tag with genre set to 215.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3219,7 +3219,7 @@ genre  : 215 (unknown)
 
 Test case 231
 Generated test file "id3v1_231_genre_F.mp3"
-An ID3 tag with genre set to 216.                                     
+An ID3 tag with genre set to 216.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3233,7 +3233,7 @@ genre  : 216 (unknown)
 
 Test case 232
 Generated test file "id3v1_232_genre_F.mp3"
-An ID3 tag with genre set to 217.                                     
+An ID3 tag with genre set to 217.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3247,7 +3247,7 @@ genre  : 217 (unknown)
 
 Test case 233
 Generated test file "id3v1_233_genre_F.mp3"
-An ID3 tag with genre set to 218.                                     
+An ID3 tag with genre set to 218.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3261,7 +3261,7 @@ genre  : 218 (unknown)
 
 Test case 234
 Generated test file "id3v1_234_genre_F.mp3"
-An ID3 tag with genre set to 219.                                     
+An ID3 tag with genre set to 219.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3275,7 +3275,7 @@ genre  : 219 (unknown)
 
 Test case 235
 Generated test file "id3v1_235_genre_F.mp3"
-An ID3 tag with genre set to 220.                                     
+An ID3 tag with genre set to 220.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3289,7 +3289,7 @@ genre  : 220 (unknown)
 
 Test case 236
 Generated test file "id3v1_236_genre_F.mp3"
-An ID3 tag with genre set to 221.                                     
+An ID3 tag with genre set to 221.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3303,7 +3303,7 @@ genre  : 221 (unknown)
 
 Test case 237
 Generated test file "id3v1_237_genre_F.mp3"
-An ID3 tag with genre set to 222.                                     
+An ID3 tag with genre set to 222.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3317,7 +3317,7 @@ genre  : 222 (unknown)
 
 Test case 238
 Generated test file "id3v1_238_genre_F.mp3"
-An ID3 tag with genre set to 223.                                     
+An ID3 tag with genre set to 223.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3331,7 +3331,7 @@ genre  : 223 (unknown)
 
 Test case 239
 Generated test file "id3v1_239_genre_F.mp3"
-An ID3 tag with genre set to 224.                                     
+An ID3 tag with genre set to 224.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3345,7 +3345,7 @@ genre  : 224 (unknown)
 
 Test case 240
 Generated test file "id3v1_240_genre_F.mp3"
-An ID3 tag with genre set to 225.                                     
+An ID3 tag with genre set to 225.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3359,7 +3359,7 @@ genre  : 225 (unknown)
 
 Test case 241
 Generated test file "id3v1_241_genre_F.mp3"
-An ID3 tag with genre set to 226.                                     
+An ID3 tag with genre set to 226.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3373,7 +3373,7 @@ genre  : 226 (unknown)
 
 Test case 242
 Generated test file "id3v1_242_genre_F.mp3"
-An ID3 tag with genre set to 227.                                     
+An ID3 tag with genre set to 227.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3387,7 +3387,7 @@ genre  : 227 (unknown)
 
 Test case 243
 Generated test file "id3v1_243_genre_F.mp3"
-An ID3 tag with genre set to 228.                                     
+An ID3 tag with genre set to 228.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3401,7 +3401,7 @@ genre  : 228 (unknown)
 
 Test case 244
 Generated test file "id3v1_244_genre_F.mp3"
-An ID3 tag with genre set to 229.                                     
+An ID3 tag with genre set to 229.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3415,7 +3415,7 @@ genre  : 229 (unknown)
 
 Test case 245
 Generated test file "id3v1_245_genre_F.mp3"
-An ID3 tag with genre set to 230.                                     
+An ID3 tag with genre set to 230.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3429,7 +3429,7 @@ genre  : 230 (unknown)
 
 Test case 246
 Generated test file "id3v1_246_genre_F.mp3"
-An ID3 tag with genre set to 231.                                     
+An ID3 tag with genre set to 231.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3443,7 +3443,7 @@ genre  : 231 (unknown)
 
 Test case 247
 Generated test file "id3v1_247_genre_F.mp3"
-An ID3 tag with genre set to 232.                                     
+An ID3 tag with genre set to 232.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3457,7 +3457,7 @@ genre  : 232 (unknown)
 
 Test case 248
 Generated test file "id3v1_248_genre_F.mp3"
-An ID3 tag with genre set to 233.                                     
+An ID3 tag with genre set to 233.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3471,7 +3471,7 @@ genre  : 233 (unknown)
 
 Test case 249
 Generated test file "id3v1_249_genre_F.mp3"
-An ID3 tag with genre set to 234.                                     
+An ID3 tag with genre set to 234.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3485,7 +3485,7 @@ genre  : 234 (unknown)
 
 Test case 250
 Generated test file "id3v1_250_genre_F.mp3"
-An ID3 tag with genre set to 235.                                     
+An ID3 tag with genre set to 235.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3499,7 +3499,7 @@ genre  : 235 (unknown)
 
 Test case 251
 Generated test file "id3v1_251_genre_F.mp3"
-An ID3 tag with genre set to 236.                                     
+An ID3 tag with genre set to 236.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3513,7 +3513,7 @@ genre  : 236 (unknown)
 
 Test case 252
 Generated test file "id3v1_252_genre_F.mp3"
-An ID3 tag with genre set to 237.                                     
+An ID3 tag with genre set to 237.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3527,7 +3527,7 @@ genre  : 237 (unknown)
 
 Test case 253
 Generated test file "id3v1_253_genre_F.mp3"
-An ID3 tag with genre set to 238.                                     
+An ID3 tag with genre set to 238.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3541,7 +3541,7 @@ genre  : 238 (unknown)
 
 Test case 254
 Generated test file "id3v1_254_genre_F.mp3"
-An ID3 tag with genre set to 239.                                     
+An ID3 tag with genre set to 239.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3555,7 +3555,7 @@ genre  : 239 (unknown)
 
 Test case 255
 Generated test file "id3v1_255_genre_F.mp3"
-An ID3 tag with genre set to 240.                                     
+An ID3 tag with genre set to 240.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3569,7 +3569,7 @@ genre  : 240 (unknown)
 
 Test case 256
 Generated test file "id3v1_256_genre_F.mp3"
-An ID3 tag with genre set to 241.                                     
+An ID3 tag with genre set to 241.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3583,7 +3583,7 @@ genre  : 241 (unknown)
 
 Test case 257
 Generated test file "id3v1_257_genre_F.mp3"
-An ID3 tag with genre set to 242.                                     
+An ID3 tag with genre set to 242.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3597,7 +3597,7 @@ genre  : 242 (unknown)
 
 Test case 258
 Generated test file "id3v1_258_genre_F.mp3"
-An ID3 tag with genre set to 243.                                     
+An ID3 tag with genre set to 243.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3611,7 +3611,7 @@ genre  : 243 (unknown)
 
 Test case 259
 Generated test file "id3v1_259_genre_F.mp3"
-An ID3 tag with genre set to 244.                                     
+An ID3 tag with genre set to 244.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3625,7 +3625,7 @@ genre  : 244 (unknown)
 
 Test case 260
 Generated test file "id3v1_260_genre_F.mp3"
-An ID3 tag with genre set to 245.                                     
+An ID3 tag with genre set to 245.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3639,7 +3639,7 @@ genre  : 245 (unknown)
 
 Test case 261
 Generated test file "id3v1_261_genre_F.mp3"
-An ID3 tag with genre set to 246.                                     
+An ID3 tag with genre set to 246.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3653,7 +3653,7 @@ genre  : 246 (unknown)
 
 Test case 262
 Generated test file "id3v1_262_genre_F.mp3"
-An ID3 tag with genre set to 247.                                     
+An ID3 tag with genre set to 247.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3667,7 +3667,7 @@ genre  : 247 (unknown)
 
 Test case 263
 Generated test file "id3v1_263_genre_F.mp3"
-An ID3 tag with genre set to 248.                                     
+An ID3 tag with genre set to 248.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3681,7 +3681,7 @@ genre  : 248 (unknown)
 
 Test case 264
 Generated test file "id3v1_264_genre_F.mp3"
-An ID3 tag with genre set to 249.                                     
+An ID3 tag with genre set to 249.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3695,7 +3695,7 @@ genre  : 249 (unknown)
 
 Test case 265
 Generated test file "id3v1_265_genre_F.mp3"
-An ID3 tag with genre set to 250.                                     
+An ID3 tag with genre set to 250.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3709,7 +3709,7 @@ genre  : 250 (unknown)
 
 Test case 266
 Generated test file "id3v1_266_genre_F.mp3"
-An ID3 tag with genre set to 251.                                     
+An ID3 tag with genre set to 251.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3723,7 +3723,7 @@ genre  : 251 (unknown)
 
 Test case 267
 Generated test file "id3v1_267_genre_F.mp3"
-An ID3 tag with genre set to 252.                                     
+An ID3 tag with genre set to 252.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3737,7 +3737,7 @@ genre  : 252 (unknown)
 
 Test case 268
 Generated test file "id3v1_268_genre_F.mp3"
-An ID3 tag with genre set to 253.                                     
+An ID3 tag with genre set to 253.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3751,7 +3751,7 @@ genre  : 253 (unknown)
 
 Test case 269
 Generated test file "id3v1_269_genre_F.mp3"
-An ID3 tag with genre set to 254.                                     
+An ID3 tag with genre set to 254.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3765,7 +3765,7 @@ genre  : 254 (unknown)
 
 Test case 270
 Generated test file "id3v1_270_genre_F.mp3"
-An ID3 tag with genre set to 255.                                     
+An ID3 tag with genre set to 255.
 Test case should generate a decoding failure.
 Tag structure
 version: 1.0
@@ -3782,8 +3782,8 @@ Tests to test charset decoding and similar optional capabilities.
 
 Test case 271
 Generated test file "id3v1_271_extra.mp3"
-Title with 8-bit iso-8859-1 characters (would be written as           
-r&auml;ksm&ouml;rg&aring;s in HTML).                                  
+Title with 8-bit iso-8859-1 characters (would be written as
+r&auml;ksm&ouml;rg&aring;s in HTML).
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -3796,8 +3796,8 @@ genre  : 0 (Blues)
 
 Test case 272
 Generated test file "id3v1_272_extra.mp3"
-Title with utf-8-encoded 8-bit string (would be written as            
-r&auml;ksm&ouml;rg&aring;s in HTML).                                  
+Title with utf-8-encoded 8-bit string (would be written as
+r&auml;ksm&ouml;rg&aring;s in HTML).
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -3810,7 +3810,7 @@ genre  : 0 (Blues)
 
 Test case 273
 Generated test file "id3v1_273_extra.mp3"
-Comment field with http://-style URL.                                 
+Comment field with http://-style URL.
 Tag structure
 version: 1.0
 head   : "TAG"
@@ -3823,7 +3823,7 @@ genre  : 0 (Blues)
 
 Test case 274
 Generated test file "id3v1_274_extra.mp3"
-Comment field with unprefixed URL.                                    
+Comment field with unprefixed URL.
 Tag structure
 version: 1.0
 head   : "TAG"
