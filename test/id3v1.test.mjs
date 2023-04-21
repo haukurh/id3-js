@@ -1,5 +1,7 @@
 import * as fs from 'fs';
 import { readID3 } from '../src/id3.mjs';
+import { expect, test } from '@jest/globals';
+import { Buffer } from 'node:buffer';
 
 const readFile = (file) => {
 	const stats = fs.statSync(file);

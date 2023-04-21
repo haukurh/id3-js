@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import { readID3 } from '../src/id3.mjs';
+import { expect, test } from '@jest/globals';
 
 const id3v1_file = fs.readFileSync('./test/files/id3v1.mp3');
 const id3v1v2_file = fs.readFileSync('./test/files/id3v1v2.mp3');
