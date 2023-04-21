@@ -4,10 +4,16 @@ const readChars = (uint8Array, position, length) => {
 	if (!Number.isInteger(position)) { throw new TypeError('position must an integer'); }
 	if (!Number.isInteger(length)) { throw new TypeError('length must an integer'); }
 
-	return [...uint8Array.slice(position, position + length)]
+	let data = [...uint8Array.slice(position, position + length)];
+
+	const nullByte = data.findIndex((byte) => byte === 0);
+	if (nullByte !== -1) {
+		data = [...data.slice(0, nullByte)]
+	}
+
+	return data
 		.map((char) => String.fromCharCode(char))
-		.join('')
-		.replace('\u0000', '');
+		.join('');
 };
 
 const findMarker = (haystack, needle) => {
