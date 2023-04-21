@@ -105,6 +105,16 @@ const getUInt32 = (uint8Array, byteOffset) => {
 		.getUint32(byteOffset, false);
 };
 
+// Most integers in ID3v2 spec are stored as "syncsafe" integers for some reason.
+// Inspiration: https://stackoverflow.com/questions/7898991/why-sync-safe-integer
+const getSyncSafeInt32 = (uint8Array, byteOffset) => {
+	const integer = getUInt32(uint8Array, byteOffset);
+	return (integer & 0x7f) |
+		(integer & 0x7f00) >> 1 |
+		(integer & 0x7f0000) >> 2 |
+		(integer & 0x7f000000) >> 3;
+};
+
 export {
 	readChars,
 	findMarker,
@@ -118,4 +128,5 @@ export {
 	getUInt32,
 	getFixedPoint16,
 	getFixedPoint32,
+	getSyncSafeInt32,
 };
