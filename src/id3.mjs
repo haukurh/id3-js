@@ -5,6 +5,8 @@ import {
 	getUInt32,
 } from './binary.mjs';
 
+import { genre } from './genre.mjs';
+
 const readIDv1 = (file) => {
 	// in ID3v1 it's always the last 128 bytes of the file
 	const tag = file.slice(-128);
@@ -13,8 +15,19 @@ const readIDv1 = (file) => {
 	if (readChars(tag, 0, 3) !== 'TAG') {
 		return null;
 	}
+
+	const genreIndex = getUInt8(tag, 127);
+
 	return {
 		version: 'ID3v1',
+		metadata: {
+			title: readChars(tag, 3, 30).trim(),
+			artist: readChars(tag, 33, 30).trim(),
+			album: readChars(tag, 63, 30).trim(),
+			year: readChars(tag, 93, 4).trim(),
+			comment: readChars(tag, 97, 30).trim(),
+			genre: genreIndex in genre ? genre[genreIndex] : 'Unknown',
+		},
 	};
 };
 
