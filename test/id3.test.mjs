@@ -19,7 +19,7 @@ test('should be able to read ID3v2', () => {
 
 test('should be able to read ID3v1', () => {
 	const id3v1 = readID3(new Uint8Array(id3v1_file.buffer));
-	expect(id3v1.version).toBe('ID3v1');
+	expect(id3v1.version).toBe('ID3v1.0');
 });
 
 test('should return null if no ID3 tag found', () => {
