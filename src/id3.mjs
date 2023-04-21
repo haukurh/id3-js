@@ -54,9 +54,9 @@ const readID3v2 = (file) => {
 	return {
 		version: `ID3v2.${minor}.${patch}`,
 		flags: {
-			unsynchronisation: ((id3[5] & 0x40) >> 6) === 1,
-			extendedHeader: ((id3[5] & 0x20) >> 5) === 1,
-			experimentalIndicator: ((id3[5] & 0x10) >> 4) === 1,
+			unsynchronisation: ((id3[5] & 0x80) >> 7) === 1,
+			extendedHeader: ((id3[5] & 0x40) >> 6) === 1,
+			experimentalIndicator: ((id3[5] & 0x20) >> 5) === 1,
 		},
 		size: size,
 	};
