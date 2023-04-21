@@ -50,6 +50,11 @@ const readID3v2 = (file) => {
 
 	return {
 		version: `${id3Tag}v2.${minor}.${patch}`,
+		flags: {
+			unsynchronisation: ((file[5] & 0x40) >> 6) === 1,
+			extendedHeader: ((file[5] & 0x20) >> 5) === 1,
+			experimentalIndicator: ((file[5] & 0x10) >> 4) === 1,
+		},
 		size: getUInt32(file, 6),
 	};
 };
