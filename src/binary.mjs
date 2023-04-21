@@ -8,7 +8,7 @@ const readChars = (uint8Array, position, length) => {
 
 	const nullByte = data.findIndex((byte) => byte === 0);
 	if (nullByte !== -1) {
-		data = [...data.slice(0, nullByte)]
+		data = [...data.slice(0, nullByte)];
 	}
 
 	return String.fromCharCode(...data);

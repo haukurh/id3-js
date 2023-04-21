@@ -15,7 +15,7 @@ const readFile = (file) => {
 		return buffer;
 	}
 	return fs.readFileSync(file);
-}
+};
 
 const readTestFile = (filepath) => {
 	const data = readFile(`./test/files/${filepath}`);
