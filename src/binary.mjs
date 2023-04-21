@@ -11,9 +11,7 @@ const readChars = (uint8Array, position, length) => {
 		data = [...data.slice(0, nullByte)]
 	}
 
-	return data
-		.map((char) => String.fromCharCode(char))
-		.join('');
+	return String.fromCharCode(...data);
 };
 
 const findMarker = (haystack, needle) => {
