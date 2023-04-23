@@ -115,6 +115,15 @@ const getSyncSafeInt32 = (uint8Array, byteOffset) => {
 		(integer & 0x7f000000) >> 3;
 };
 
+const getSyncSafeInt35 = (uint8Array, byteOffset) => {
+	const data = new Uint8Array([...uint8Array.slice(byteOffset, byteOffset + 5)]);
+	const last =  ((data[3] & 0x1) << 7) | data[4];
+	const nr3 =  ((data[2] & 0x3) << 6) | (data[3] >> 1);
+	const nr2 =  ((data[1] & 0x7) << 5) | (data[2] >> 2);
+	const nr1 =  (data[0] << 4) | (data[1] >> 3);
+	return getUInt32(new Uint8Array([nr1, nr2, nr3, last]), 0);
+};
+
 export {
 	readChars,
 	findMarker,
@@ -129,4 +138,5 @@ export {
 	getFixedPoint16,
 	getFixedPoint32,
 	getSyncSafeInt32,
+	getSyncSafeInt35,
 };
