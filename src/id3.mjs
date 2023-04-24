@@ -2,10 +2,8 @@
 import {
 	readChars,
 	getUInt8,
-	getUInt32,
-	getInt32,
 	getSyncSafeInt32,
-	getSyncSafeInt35,
+	getSyncSafeInt35, getUInt16,
 } from './binary.mjs';
 
 import { genre } from './genre.mjs';
@@ -41,6 +39,18 @@ const readID3v1 = (file) => {
 	return id3;
 };
 
+const handleTextFrame = (stream) => {
+	const encoding = stream[0];
+	const strings = [];
+	stream = stream.slice(1);
+	while(stream.length) {
+		const str = readChars(stream, 0, stream.length);
+		strings.push(str);
+		stream = stream.slice(str.length > 0 ? str.length : 1);
+	}
+	return strings.length === 1 ? strings[0] : strings;
+};
+
 const readID3v2 = (file) => {
 	// The first 3 bytes of the file should write out 'ID3' for v2
 	if (readChars(file, 0, 3) !== 'ID3') {
@@ -65,6 +75,7 @@ const readID3v2 = (file) => {
 			footerPresent: ((id3[5] & 0x10) >> 4) === 1,
 		},
 		size: size,
+		frames: [],
 	};
 
 	id3 = id3.slice(10);
@@ -112,6 +123,31 @@ const readID3v2 = (file) => {
 		if (data.extendedHeader.size !== extendedHeaderSize) {
 			throw 'Unexpected header size in ID3v2 extended header';
 		}
+		id3 = extendedHeader;
+	}
+
+	while (/^[A-Z0-9]{4}$/.test(readChars(id3, 0, 4))) {
+		const frameSize = getSyncSafeInt32(id3, 4);
+		const frame = {
+			id: readChars(id3, 0, 4),
+			size: frameSize,
+			flags: {
+				tagAlterPreservation: ((id3[8] & 0x40) >> 6) === 1,
+				fileAlterPreservation: ((id3[8] & 0x20) >> 5) === 1,
+				readOnly: ((id3[8] & 0x10) >> 4) === 1,
+				groupingIdentity: ((id3[9] & 0x40) >> 6) === 1,
+				compression: ((id3[9] & 0x8) >> 3) === 1,
+				encryption: ((id3[9] & 0x4) >> 2) === 1,
+				unsynchronisation: ((id3[9] & 0x2) >> 1) === 1,
+				dataLengthIndicator: (id3[9] & 0x1) === 1,
+			},
+			data: id3.slice(10, frameSize + 10),
+		};
+		if (frame.id[0] === 'T' && frame.id !== 'TXXX') {
+			frame.data = handleTextFrame(frame.data);
+		}
+		data.frames.push(frame);
+		id3 = id3.slice(frame.size + 10);
 	}
 
 	return data;
